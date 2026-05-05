@@ -12,9 +12,30 @@
 //  - the mega (3-col) dropdowns
 //  - the status dot
 //  - the mobile burger + full-screen mobile menu
-// Core nav CSS (pill, logo, dropdown panel shell) still lives in each page's <style>.
+// Core nav styles live in components/nav.css and are auto-injected below
+// (mirrors the footer.js → footer.css pattern). Existing pages still have
+// inline copies of these rules; that's harmless redundancy — both resolve
+// to the same values, so there's no conflict.
 
 (function() {
+  // ─── AUTO-INJECT NAV.CSS (idempotent) ───
+  // Resolves the stylesheet path relative to nav.js itself, so external
+  // hosts (Webflow, etc.) just need to include nav.js — the CSS comes
+  // along automatically.
+  if (!document.querySelector('link[data-team-nav-css]')) {
+    var thisScript = document.currentScript
+      || Array.from(document.scripts).reverse().find(function(s){ return /components\/nav\.js/.test(s.src); });
+    var href = 'components/nav.css';
+    if (thisScript && thisScript.src) {
+      try { href = new URL('nav.css', thisScript.src).href; } catch (e) {}
+    }
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.setAttribute('data-team-nav-css', '');
+    document.head.appendChild(link);
+  }
+
   // ─── SINGLE SOURCE OF TRUTH FOR ALL SITE LINKS ───
   const links = {
     home: 'homepage.html',
