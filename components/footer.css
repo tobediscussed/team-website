@@ -4,7 +4,7 @@
    Edit this file to change footer styling site-wide.
    ============================================================ */
 
-.footer{background:var(--black,#191919);color:rgba(255,255,255,0.6);padding:6rem 2rem 0;position:relative;overflow:hidden}
+.footer{background:var(--black,#191919);color:rgba(255,255,255,0.6);padding:6rem 2rem 2rem;position:relative;overflow:hidden}
 .footer::before{content:'';position:absolute;top:-10rem;right:-10rem;width:30rem;height:30rem;border-radius:50%;background:radial-gradient(circle,rgba(245,96,2,0.15),transparent 70%);pointer-events:none}
 
 /* Newsletter */
