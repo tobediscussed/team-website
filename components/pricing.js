@@ -23,7 +23,7 @@
       if (plan === 'free') {
         // Update CTA link period param
         const cta = card.querySelector('[data-cta]');
-        if (cta) cta.href = 'onboarding.html?plan=free&period=' + period;
+        if (cta) cta.href = '/onboarding?plan=free&period=' + period;
         return;
       }
 
@@ -41,7 +41,7 @@
         }
       }
       if (billingEl) billingEl.textContent = 'billed ' + period;
-      if (cta) cta.href = 'onboarding.html?plan=' + plan + '&period=' + period;
+      if (cta) cta.href = '/onboarding?plan=' + plan + '&period=' + period;
     });
   }
 

@@ -19,8 +19,8 @@
 (function() {
   // ─── LINKS ─── update when privacy/cookie pages are live
   const links = {
-    privacy: 'privacy.html',
-    cookies: 'cookie-policy.html',
+    privacy: '/privacy',
+    cookies: '/cookie-policy',
   };
 
   // ─── INJECT LIBRARY CSS + JS FROM CDN ───
