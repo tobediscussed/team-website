@@ -9,7 +9,9 @@
   color:#111110;
   background:#fff;
 }
-#team-home-root h1,#team-home-root h2,#team-home-root h3,#team-home-root h4,#team-home-root h5,#team-home-root h6{color:inherit}
+#team-home-root h1,#team-home-root h2,#team-home-root h3,#team-home-root h4,#team-home-root h5,#team-home-root h6{color:inherit !important}
+/* Belt-and-braces: roles section is light-bg, headline must be dark. */
+#team-home-root .roles-section,#team-home-root .roles-section *{color:var(--black,#191919)}
 
 /* =============================================
    RESET & TOKENS
