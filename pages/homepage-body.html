@@ -1,0 +1,1535 @@
+
+<!-- Background blur overlay for nav dropdowns -->
+<div class="nav-blur-overlay" id="navBlurOverlay"></div>
+
+<!-- Mobile menu -->
+<div class="nav-mobile-overlay" id="navMobileOverlay"></div>
+<div class="nav-mobile" id="navMobile" aria-hidden="true" role="dialog" aria-label="Site menu">
+  <div class="nav-mobile__header">
+    <a href="/" class="nav-mobile__logo">
+      <img src="https://www.teamrollouts.com/Team%20Logo%20Graident%2002%20+%20Black.svg" alt="Team">
+    </a>
+    <button class="nav-mobile__close" id="navMobileClose" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile__panels">
+    <!-- Main -->
+    <div class="nav-mobile__panel nav-mobile__panel--main" id="navMobileMain">
+      <div class="nav-mobile__list">
+        <button class="nav-mobile__item" data-mobile-open="product">Product<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <button class="nav-mobile__item" data-mobile-open="solutions">Solutions<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <button class="nav-mobile__item" data-mobile-open="resources">Resources<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <a href="https://siteamrollouts.github.io/team-website/pricing.html" class="nav-mobile__item">Pricing</a>
+      </div>
+      <a href="#status" class="nav-mobile__status" style="text-decoration:none">
+        <span class="nav__status-dot"></span>
+        <span>All systems operational</span>
+      </a>
+    </div>
+
+    <!-- Product sub-panel -->
+    <div class="nav-mobile__panel nav-mobile__panel--sub" id="navMobileSub-product">
+      <div class="nav-mobile__sub-header">
+        <button class="nav-mobile__back" data-mobile-back aria-label="Back"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <span class="nav-mobile__sub-title">Product</span>
+      </div>
+      <div class="nav-mobile__sub-content">
+        <div class="nav-mobile__section">
+          <div class="nav-mobile__section-label">Platform</div>
+          <a href="https://siteamrollouts.github.io/team-website/orchestration.html">Release Orchestration<span class="nav-mobile__link-desc">Plan, coordinate, and execute every release.</span></a>
+          <a href="https://siteamrollouts.github.io/team-website/intelligence.html">Release Intelligence<span class="nav-mobile__link-desc">AI-powered insights across your release cycle.</span></a>
+        </div>
+        <div class="nav-mobile__divider"></div>
+        <div class="nav-mobile__section">
+          <div class="nav-mobile__section-label">Extend</div>
+          <a href="https://siteamrollouts.github.io/team-website/integrations.html">Integrations<span class="nav-mobile__link-desc">Connect Team to your existing tools.</span></a>
+          <a href="https://siteamrollouts.github.io/team-website/security.html">Security<span class="nav-mobile__link-desc">Your data protected. Your music safe.</span></a>
+        </div>
+        <div class="nav-mobile__promo">
+          <div class="nav-mobile__promo-label">Get started</div>
+          <h4>See Team in action.</h4>
+          <p>Watch a guided walkthrough tailored to your workflow.</p>
+          <a href="https://siteamrollouts.github.io/team-website/demo.html" class="nav-mobile__promo-btn">Book a demo →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solutions sub-panel -->
+    <div class="nav-mobile__panel nav-mobile__panel--sub" id="navMobileSub-solutions">
+      <div class="nav-mobile__sub-header">
+        <button class="nav-mobile__back" data-mobile-back aria-label="Back"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <span class="nav-mobile__sub-title">Solutions</span>
+      </div>
+      <div class="nav-mobile__sub-content">
+        <div class="nav-mobile__section">
+          <div class="nav-mobile__section-label">By role</div>
+          <a href="https://siteamrollouts.github.io/team-website/for-labels.html">For Labels<span class="nav-mobile__link-desc">Manage every release across your roster.</span></a>
+          <a href="https://siteamrollouts.github.io/team-website/for-managers.html">For Managers<span class="nav-mobile__link-desc">One view of every artist's rollout.</span></a>
+          <a href="https://siteamrollouts.github.io/team-website/for-artists.html">For Artists<span class="nav-mobile__link-desc">Stay in the loop on your release.</span></a>
+        </div>
+        <div class="nav-mobile__divider"></div>
+        <div class="nav-mobile__section">
+          <div class="nav-mobile__section-label">Ecosystem</div>
+          <a href="https://siteamrollouts.github.io/team-website/for-partners.html">For Partners<span class="nav-mobile__link-desc">Marketing, distributors, and service providers.</span></a>
+          <a href="https://siteamrollouts.github.io/team-website/enterprise.html">For Enterprise<span class="nav-mobile__link-desc">Custom deployments for major labels and large rosters.</span></a>
+        </div>
+        <div class="nav-mobile__promo">
+          <div class="nav-mobile__promo-label">Try it free</div>
+          <h4>Start free for 60 days.</h4>
+          <p>No credit card required. Full access to Team on your first three releases.</p>
+          <a href="https://siteamrollouts.github.io/team-website/onboarding.html" class="nav-mobile__promo-btn">Start free →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resources sub-panel -->
+    <div class="nav-mobile__panel nav-mobile__panel--sub" id="navMobileSub-resources">
+      <div class="nav-mobile__sub-header">
+        <button class="nav-mobile__back" data-mobile-back aria-label="Back"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <span class="nav-mobile__sub-title">Resources</span>
+      </div>
+      <div class="nav-mobile__sub-content">
+        <div class="nav-mobile__section">
+          <div class="nav-mobile__section-label">Learn</div>
+          <a href="https://siteamrollouts.github.io/team-website/insights.html">Insights<span class="nav-mobile__link-desc">Release strategy, playbooks, and deep dives.</span></a>
+          <a href="https://siteamrollouts.github.io/team-website/changelog.html">Changelog<span class="nav-mobile__link-desc">What's new and shipping in Team.</span></a>
+          <a href="/about">About Team<span class="nav-mobile__link-desc">Why we built the OS for music releases.</span></a>
+        </div>
+        <div class="nav-mobile__divider"></div>
+        <div class="nav-mobile__section">
+          <div class="nav-mobile__section-label">Connect</div>
+          <a href="https://siteamrollouts.github.io/team-website/demo.html">Book a Demo<span class="nav-mobile__link-desc">Walk through Team with a specialist.</span></a>
+          <a href="https://siteamrollouts.github.io/team-website/contact.html">Contact Us<span class="nav-mobile__link-desc">Talk to sales, support, or partnerships.</span></a>
+        </div>
+        <div class="nav-mobile__promo">
+          <div class="nav-mobile__promo-label">Questions?</div>
+          <h4>Talk to the team.</h4>
+          <p>We reply to every message personally — usually within a few hours.</p>
+          <a href="https://siteamrollouts.github.io/team-website/contact.html" class="nav-mobile__promo-btn">Get in touch →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-mobile__footer">
+    <a href="https://siteamrollouts.github.io/team-website/sign-in.html" class="nav-mobile__btn nav-mobile__btn--ghost">Login</a>
+    <a href="https://siteamrollouts.github.io/team-website/onboarding.html" class="nav-mobile__btn nav-mobile__btn--primary">Start free</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO — Full-viewport image with clip-path frame effect
+     As you scroll, the image "pulls in" from the edges:
+     - clip-path insets by 2% on all sides
+     - corners round to 1rem
+     - image counter-scales to keep content visually stable
+     - dark overlay darkens simultaneously
+     ═══════════════════════════════════════════ -->
+<section class="hero-section" id="heroSection">
+  <!-- Image wrapper — this clips inward -->
+  <div class="hero-img-w" id="heroImgW">
+    <img
+      src="https://siteamrollouts.github.io/team-website/assets/hero-bg-option-1.jpeg"
+      alt=""
+      class="hero-img"
+      loading="eager"
+    >
+  </div>
+
+  <!-- Cover: headline, body, CTAs — floats on top -->
+  <div class="cover-w" id="coverW">
+    <div class="cover__intro" id="coverIntro">
+      <h1 class="headline-xl">The <span class="typer" id="heroTyper">Command Center</span><span class="typer__caret" aria-hidden="true"></span><br><span class="nyght">for your music releases</span></h1>
+      <p>Stop juggling spreadsheets, Slack threads, and email chains.<br>One platform for your entire rollout.</p>
+      <div class="cover__buttons">
+        <a href="https://siteamrollouts.github.io/team-website/demo.html" class="btn btn--primary btn--demo"><svg class="btn--demo__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="12" height="11" rx="2"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="5" y1="1" x2="5" y2="4"/><line x1="11" y1="1" x2="11" y2="4"/></svg>Book demo</a>
+        <a href="#" class="btn btn--outline" data-video-trigger>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><polygon points="3,1 13,8 3,15"/></svg>
+          See the platform
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- All three excerpt tiles in a wrapper — wrapper gets pinned, tiles are siblings -->
+  <div class="hero-excerpts" id="heroExcerpts">
+    <div class="hero-excerpt__flank hero-excerpt__flank--left" id="heroExcerptLeft"></div>
+    <div class="hero-excerpt__flank hero-excerpt__flank--right" id="heroExcerptRight"></div>
+    <div class="hero-excerpt" id="heroExcerpt"><div class="hero-excerpt__img" id="heroExcerptImg"></div></div>
+
+    <!-- Labels under each tile: Single (left), EP (center), Album (right) -->
+    <div class="tile-label tile-label--left" id="tileLabelLeft">
+      <div class="tile-label__arrow">
+        <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M48 52 C 44 32, 28 18, 10 12"/>
+          <path d="M16 6 L 10 12 L 16 18"/>
+        </svg>
+      </div>
+      <div class="tile-label__text">Single</div>
+    </div>
+    <div class="tile-label tile-label--center" id="tileLabelCenter">
+      <div class="tile-label__arrow">
+        <svg viewBox="0 0 40 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 52 C 12 40, 28 30, 20 14"/>
+          <path d="M14 20 L 20 14 L 26 20"/>
+        </svg>
+      </div>
+      <div class="tile-label__text">EP</div>
+    </div>
+    <div class="tile-label tile-label--right" id="tileLabelRight">
+      <div class="tile-label__arrow">
+        <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M48 52 C 44 32, 28 18, 10 12"/>
+          <path d="M16 6 L 10 12 L 16 18"/>
+        </svg>
+      </div>
+      <div class="tile-label__text">Album</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     ROLE MARQUEE — Who uses Team
+     Two rows, opposite directions, colour-coded role chips
+     ═══════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════
+     UPLOAD SECTION (scroll pin anchor)
+     ═══════════════════════════════════════════ -->
+<section class="section" id="uploadSection">
+  <div class="container container--center">
+    <div class="section-intro">
+      <h2 class="headline-lg">One platform. One team.</h2>
+      <p class="body-lg">Whether you're rolling out a single, EP, or Album, every task, every asset, and every conversation needs a single home.</p>
+      <a href="#" class="btn btn--primary" style="margin-top:1.25rem" data-video-trigger>See how it works</a>
+    </div>
+    <!-- Whitespace for the tiles to land in -->
+    <div id="tileLandingZone" style="height:18rem"></div>
+    <!-- Three targets where the excerpts land in a row -->
+    <div class="excerpt-landing">
+      <div class="excerpt-target" id="excerptTargetLeft"></div>
+      <div class="excerpt-target" id="excerptTargetCenter"></div>
+      <div class="excerpt-target" id="excerptTargetRight"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     ROLES — Who Team serves
+     ═══════════════════════════════════════════ -->
+<section class="roles-section" id="rolesSection">
+  <div class="roles-inner">
+    <div class="roles-header">
+      <div class="roles-label">Built for every role</div>
+      <h2 class="headline-lg">From <span class="nyght">independent artists</span><br>to <span class="nyght">major labels</span></h2>
+      <p class="body-lg" style="max-width:36rem;margin:1rem auto 0;color:var(--text-secondary)">Whether you manage one artist or a roster of fifty, Team adapts to how you work.</p>
+    </div>
+
+    <div class="roles-tabs" role="tablist">
+      <button class="roles-tab is-active" data-role="artist" role="tab">Artists</button>
+      <button class="roles-tab" data-role="manager" role="tab">Managers</button>
+      <button class="roles-tab" data-role="label" role="tab">Labels</button>
+      <button class="roles-tab" data-role="marketing" role="tab">Marketing &amp; A&amp;R</button>
+    </div>
+
+    <div class="roles-panels">
+      <!-- Artists -->
+      <div class="roles-panel is-active" data-role="artist">
+        <div class="role-featured">
+          <div class="role-featured__num">01</div>
+          <div class="role-featured__title">Run your own rollout</div>
+          <div class="role-featured__desc">Plan your release, keep collaborators aligned, and stay on top of every deadline — without needing a label behind you.</div>
+        </div>
+        <div class="role-stack">
+          <div class="role-row"><div class="role-row__num">02</div><div><div class="role-row__title">Creative asset hub</div><div class="role-row__desc">Keep artwork, videos, masters, and promo assets in one place for every release.</div></div></div>
+          <div class="role-row"><div class="role-row__num">03</div><div><div class="role-row__title">Fan engagement playbook</div><div class="role-row__desc">Schedule socials, pre-saves, and fan moments connected to your timeline.</div></div></div>
+          <div class="role-row"><div class="role-row__num">04</div><div><div class="role-row__title">Collaborator coordination</div><div class="role-row__desc">Bring producers, managers, and PR into a shared workspace — no Slack chaos.</div></div></div>
+        </div>
+        <a href="https://siteamrollouts.github.io/team-website/for-artists.html" class="role-learn-more" style="grid-column:1/-1;text-align:center"><span class="rlm-text">Learn more about Team for Artists</span> <span class="arrow">&rarr;</span></a>
+      </div>
+
+      <!-- Managers -->
+      <div class="roles-panel" data-role="manager">
+        <div class="role-featured">
+          <div class="role-featured__num">01</div>
+          <div class="role-featured__title">One view across every artist</div>
+          <div class="role-featured__desc">Timeline, budget, assets, comms — everything you need to run multiple artists' releases side by side.</div>
+        </div>
+        <div class="role-stack">
+          <div class="role-row"><div class="role-row__num">02</div><div><div class="role-row__title">Stakeholder updates in one click</div><div class="role-row__desc">Generate status reports for artists, labels, and partners automatically.</div></div></div>
+          <div class="role-row"><div class="role-row__num">03</div><div><div class="role-row__title">Deadline tracking</div><div class="role-row__desc">Smart notifications before pitches, assets, or approvals are late.</div></div></div>
+          <div class="role-row"><div class="role-row__num">04</div><div><div class="role-row__title">Cross-functional coordination</div><div class="role-row__desc">Keep PR, social, paid, and distribution aligned without being the human glue.</div></div></div>
+        </div>
+        <a href="https://siteamrollouts.github.io/team-website/for-managers.html" class="role-learn-more" style="grid-column:1/-1;text-align:center"><span class="rlm-text">Learn more about Team for Managers</span> <span class="arrow">&rarr;</span></a>
+      </div>
+
+      <!-- Labels -->
+      <div class="roles-panel" data-role="label">
+        <div class="role-featured">
+          <div class="role-featured__num">01</div>
+          <div class="role-featured__title">Cross-roster visibility</div>
+          <div class="role-featured__desc">See every release across every artist in one view. Know what's on track, what's at risk, and where to focus today.</div>
+        </div>
+        <div class="role-stack">
+          <div class="role-row"><div class="role-row__num">02</div><div><div class="role-row__title">Budget oversight</div><div class="role-row__desc">Track spend across releases and artists in real time. No more end-of-quarter surprises.</div></div></div>
+          <div class="role-row"><div class="role-row__num">03</div><div><div class="role-row__title">Team performance</div><div class="role-row__desc">Understand who's delivering, what's bottlenecking — with data, not gut feel.</div></div></div>
+          <div class="role-row"><div class="role-row__num">04</div><div><div class="role-row__title">Strategic planning</div><div class="role-row__desc">Map your release calendar against market windows, competitor drops, and cultural moments.</div></div></div>
+        </div>
+        <a href="https://siteamrollouts.github.io/team-website/for-labels.html" class="role-learn-more" style="grid-column:1/-1;text-align:center"><span class="rlm-text">Learn more about Team for Labels</span> <span class="arrow">&rarr;</span></a>
+      </div>
+
+      <!-- Marketing & A&R -->
+      <div class="roles-panel" data-role="marketing">
+        <div class="role-featured">
+          <div class="role-featured__num">01</div>
+          <div class="role-featured__title">Campaign planning that sticks</div>
+          <div class="role-featured__desc">Build multi-channel marketing plans connected to your release timeline. Social, paid, email — all in sync.</div>
+        </div>
+        <div class="role-stack">
+          <div class="role-row"><div class="role-row__num">02</div><div><div class="role-row__title">Content production</div><div class="role-row__desc">Brief, draft, review, and approve assets without leaving the platform. TeamMate handles first drafts.</div></div></div>
+          <div class="role-row"><div class="role-row__num">03</div><div><div class="role-row__title">Release readiness</div><div class="role-row__desc">Know where every release stands — masters delivered, metadata confirmed, artwork approved.</div></div></div>
+          <div class="role-row"><div class="role-row__num">04</div><div><div class="role-row__title">Playlist &amp; press strategy</div><div class="role-row__desc">Track pitch windows, submission deadlines, and editorial contacts. Never miss an opportunity.</div></div></div>
+        </div>
+        <a href="https://siteamrollouts.github.io/team-website/for-partners.html" class="role-learn-more" style="grid-column:1/-1;text-align:center"><span class="rlm-text">Learn more about Team for Partners</span> <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SEARCH / ENGINE
+     ═══════════════════════════════════════════ -->
+<section class="engine-section" id="engineSection" data-module="engine">
+  <!-- Interactive gradient backdrop (fades in while search bar is pinned) -->
+  <div class="engine-gradient" id="engineGradient">
+    <div class="engine-gradient__wash"></div>
+    <div class="engine-gradient__blob engine-gradient__blob--left" id="engineBlobLeft"></div>
+    <div class="engine-gradient__blob engine-gradient__blob--primary" id="engineBlob1"></div>
+    <div class="engine-gradient__blob engine-gradient__blob--secondary" id="engineBlob2"></div>
+    <div class="engine-gradient__blob engine-gradient__blob--tertiary" id="engineBlobTertiary"></div>
+  </div>
+
+  <div class="container container--center">
+    <div class="section-intro">
+      <h2 class="headline-lg">Find your personal<br>release companion in <span class="nyght">TeamMate</span></h2>
+      <p class="body-lg" style="white-space:nowrap">Converse, plan, and execute plays with AI-powered release intelligence.</p>
+    </div>
+    <div class="search-pin-wrap" id="searchPinWrap" style="margin-top:3rem">
+      <div class="search-bar" id="searchBar" style="position:relative">
+        <input class="search-input" id="searchInput" placeholder="Ask TeamMate anything..." disabled>
+        <button class="search-submit" id="searchSubmit">
+          <span class="search-submit__label">Ask TeamMate</span>
+          <span class="search-submit__spinner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M21 12a9 9 0 1 1-6.22-8.56" opacity="0.95"/>
+              <path d="M12 3a9 9 0 0 1 0 0" opacity="0.25"/>
+            </svg>
+          </span>
+        </button>
+        <div class="search-dialog" id="searchDialog">To try the search, book a demo</div>
+      </div>
+      <div class="pondering" id="pondering">
+        <span class="pondering__dot"></span>
+        <span class="pondering__dot"></span>
+        <span class="pondering__dot"></span>
+        <span class="pondering__text">TeamMate is pondering</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="engine-w" id="enginePin" style="display:none">
+    <div class="search-selects">
+      <div class="search-select" data-module="select">
+        <span>Category</span>
+        <svg class="search-select__arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        <div class="search-select__list">
+          <div class="search-select__item">Campaign</div>
+          <div class="search-select__item">Event</div>
+          <div class="search-select__item">Product</div>
+        </div>
+      </div>
+      <div class="search-select" data-module="select">
+        <span>Type</span>
+        <svg class="search-select__arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        <div class="search-select__list">
+          <div class="search-select__item">Image</div>
+          <div class="search-select__item">Video</div>
+          <div class="search-select__item">Design</div>
+        </div>
+      </div>
+      <div class="search-select" data-module="select">
+        <span>Industry</span>
+        <svg class="search-select__arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        <div class="search-select__list">
+          <div class="search-select__item">Tech</div>
+          <div class="search-select__item">Health</div>
+          <div class="search-select__item">Retail</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-grid" id="resultsGrid" style="margin-top:2rem">
+      <div class="results-breadcrumb">
+        <span>All assets</span> <span>/</span> <span>Search results</span>
+      </div>
+      <div class="result-card-w rc-1 is-drop"><div class="result-card"><div class="result-card__side result-card__front" data-label="Portrait_01.jpg"></div><div class="result-card__side result-card__back"><div class="result-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div></div></div>
+      <div class="result-card-w rc-2"><div class="result-card"><div class="result-card__side result-card__front" data-label="Campaign_hero.png"></div><div class="result-card__side result-card__back"><div class="result-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div></div></div>
+      <div class="result-card-w rc-3"><div class="result-card"><div class="result-card__side result-card__front" data-label="Product_shot.jpg"></div><div class="result-card__side result-card__back"><div class="result-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div></div></div>
+      <div class="result-card-w rc-4"><div class="result-card"><div class="result-card__side result-card__front" data-label="Team_photo.png"></div><div class="result-card__side result-card__back"><div class="result-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div></div></div>
+      <div class="result-card-w rc-5"><div class="result-card"><div class="result-card__side result-card__front" data-label="Banner_v2.jpg"></div><div class="result-card__side result-card__back"><div class="result-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div></div></div>
+      <div class="result-card-w rc-6"><div class="result-card"><div class="result-card__side result-card__front" data-label="Social_post.png"></div><div class="result-card__side result-card__back"><div class="result-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     GUIDELINES + AI ASSISTANT
+     ═══════════════════════════════════════════ -->
+<section class="guidelines-section" id="guidelinesSection">
+  <div id="assistantTrigger" class="guidelines-trigger" style="width:100%">
+    <div class="guidelines-w" id="guidelinesWrap">
+      <!-- Sidebar -->
+      <div class="guidelines-nav">
+        <div class="guidelines-nav__header" style="justify-content:flex-start">
+          <img src="https://siteamrollouts.github.io/team-website/assets/logo-gradient.svg" alt="Team" style="height:1.5rem;width:auto">
+        </div>
+        <!-- Search -->
+        <div style="position:relative;margin-bottom:0.75rem">
+          <svg style="position:absolute;left:0.625rem;top:50%;transform:translateY(-50%);opacity:0.35" width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
+          <input type="text" placeholder="Search releases..." disabled style="width:100%;padding:0.4rem 0.5rem 0.4rem 1.75rem;border:1px solid rgba(0,0,0,0.08);border-radius:0.375rem;font-size:0.75rem;font-family:inherit;background:transparent;color:var(--text-secondary);outline:none">
+        </div>
+        <!-- Main nav -->
+        <div class="platform-nav-item is-active" style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;border-radius:0.375rem;font-size:0.8125rem;font-weight:500;background:var(--black);color:#fff;margin-bottom:0.125rem">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+          Command Center
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.125rem">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+          Recents
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.125rem">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="6" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg>
+          Artists
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.125rem">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h12M2 8h12M2 13h8"/></svg>
+          Press Runs
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M5 8h6M8 5v6"/></svg>
+          Touring
+        </div>
+        <!-- Your Releases section -->
+        <div style="font-size:0.625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(0,0,0,0.3);padding:0.25rem 0.75rem 0.5rem">Your Releases</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:0.375rem 0.75rem;font-size:0.8125rem;color:var(--text-secondary)">
+          <span>All Releases</span><span style="font-size:0.75rem;opacity:0.5">99</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:0.375rem 0.75rem;font-size:0.8125rem;color:var(--text-secondary)">
+          <span>In Progress</span><span style="font-size:0.75rem;opacity:0.5">61</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:0.375rem 0.75rem;font-size:0.8125rem;color:var(--text-secondary)">
+          <span>Released</span><span style="font-size:0.75rem;opacity:0.5">38</span>
+        </div>
+
+        <!-- TeamMate chat panel — fades in with the timeline -->
+        <div id="teammateChat" style="margin-top:auto;padding-top:0.75rem;opacity:0;pointer-events:none;display:flex;flex-direction:column;gap:0.5rem">
+          <!-- Chat header -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:0 0.5rem 0.5rem;border-bottom:1px solid rgba(0,0,0,0.06);margin-bottom:0.25rem">
+            <div style="display:flex;align-items:center;gap:0.375rem">
+              <img src="https://siteamrollouts.github.io/team-website/assets/teammate-avatar-round.png" alt="" style="width:1.25rem;height:1.25rem;border-radius:50%;flex-shrink:0;object-fit:cover">
+              <span style="font-size:0.75rem;font-weight:700;color:var(--black)">TeamMate</span>
+              <span style="font-size:0.5rem;padding:0.0625rem 0.3125rem;border-radius:100px;background:rgba(16,185,129,0.12);color:#047857;font-weight:700;letter-spacing:0.04em">ONLINE</span>
+            </div>
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="rgba(0,0,0,0.4)" stroke-width="2"><path d="M12 4L4 12M4 4l8 8"/></svg>
+          </div>
+
+          <!-- User message -->
+          <div id="chatUserMsg" style="display:flex;gap:0.4375rem;align-items:flex-start;opacity:0">
+            <div style="flex:1;min-width:0">
+              <div style="font-size:0.5625rem;font-weight:700;color:rgba(0,0,0,0.5);margin-bottom:0.125rem;text-align:right">You · 2m ago</div>
+              <div style="background:#111;color:#fff;padding:0.4375rem 0.625rem;border-radius:0.75rem 0.75rem 0.125rem 0.75rem;font-size:0.6875rem;line-height:1.4">Plan a comprehensive pre-release strategy focused on fan engagement</div>
+            </div>
+            <div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#6366f1);flex-shrink:0;font-size:0.5rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">SL</div>
+          </div>
+
+          <!-- TeamMate response -->
+          <div id="chatAiMsg" style="display:flex;gap:0.4375rem;align-items:flex-start;opacity:0">
+            <img src="https://siteamrollouts.github.io/team-website/assets/teammate-avatar-round.png" alt="" style="width:1.25rem;height:1.25rem;border-radius:50%;flex-shrink:0;object-fit:cover">
+            <div style="flex:1;min-width:0">
+              <div style="font-size:0.5625rem;font-weight:700;color:rgba(0,0,0,0.5);margin-bottom:0.125rem">TeamMate · just now</div>
+              <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);padding:0.4375rem 0.625rem;border-radius:0.75rem 0.75rem 0.75rem 0.125rem;font-size:0.6875rem;line-height:1.45;color:var(--black)">
+                Done. I've added <strong>6 tasks</strong> to the Arcadia timeline covering social teasers, playlist pitch, press run, and launch week.
+                <div style="display:flex;flex-wrap:wrap;gap:0.1875rem;margin-top:0.375rem">
+                  <span style="font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:0.125rem 0.3125rem;border-radius:100px;background:rgba(236,72,153,0.12);color:#be185d">+ Social · 2</span>
+                  <span style="font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:0.125rem 0.3125rem;border-radius:100px;background:rgba(16,185,129,0.12);color:#047857">+ A&amp;R · 1</span>
+                  <span style="font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:0.125rem 0.3125rem;border-radius:100px;background:rgba(245,96,2,0.12);color:#c2410c">+ Marketing · 2</span>
+                  <span style="font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:0.125rem 0.3125rem;border-radius:100px;background:rgba(245,96,2,0.12);color:#c2410c">+ Events · 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat input -->
+          <div style="margin-top:0.25rem;display:flex;align-items:center;gap:0.375rem;padding:0.375rem 0.5rem;border:1px solid rgba(0,0,0,0.08);border-radius:100px;background:#fff">
+            <input type="text" placeholder="Reply to TeamMate..." disabled style="flex:1;border:none;outline:none;font-size:0.6875rem;font-family:inherit;background:transparent;color:var(--text-secondary);min-width:0">
+            <button style="width:1.125rem;height:1.125rem;border-radius:50%;background:var(--accent);border:none;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer">
+              <svg width="8" height="8" viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Content area — Release cards grid -->
+      <div class="guidelines-content" style="padding:1.25rem;position:relative;overflow:hidden">
+        <!-- Header bar -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem">
+          <div style="font-size:1.25rem;font-weight:700;color:var(--black)">Releases</div>
+          <div style="display:flex;gap:0.5rem">
+            <div style="font-size:0.75rem;font-weight:600;padding:0.375rem 0.875rem;border-radius:0.375rem;border:1px solid rgba(0,0,0,0.1);color:var(--text-secondary)">+ Add Artist</div>
+            <div style="font-size:0.75rem;font-weight:600;padding:0.375rem 0.875rem;border-radius:0.375rem;background:var(--accent);color:#fff">+ New Release</div>
+          </div>
+        </div>
+        <!-- Tabs -->
+        <div style="display:flex;gap:0;margin-bottom:1.25rem;border-bottom:1px solid rgba(0,0,0,0.06)">
+          <div style="font-size:0.8125rem;font-weight:600;padding:0.5rem 1rem;border-bottom:2px solid var(--black);color:var(--black)">All Releases</div>
+          <div style="font-size:0.8125rem;padding:0.5rem 1rem;color:var(--text-secondary)">In Progress</div>
+          <div style="font-size:0.8125rem;padding:0.5rem 1rem;color:var(--text-secondary)">Released</div>
+        </div>
+        <!-- Release cards grid — 9 tiles with unique SVG illustrations -->
+        <div class="releases-grid-wrap" id="releasesGridWrap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;will-change:opacity">
+
+          <!-- Arcadia: monochrome peaks silhouette -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(180deg,#2a2a2a 0%,#1a1a1a 100%);display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(245,96,2,0.15);color:#fb923c;position:absolute;top:0.5rem;left:0.5rem;z-index:2">In Progress</span>
+              <svg width="100%" height="100%" viewBox="0 0 160 96" preserveAspectRatio="none" style="position:absolute;bottom:0"><circle cx="120" cy="30" r="14" fill="none" stroke="#f5f5f5" stroke-width="1" opacity="0.5"/><circle cx="120" cy="30" r="6" fill="#f5f5f5" opacity="0.9"/><path d="M0 96 L30 55 L55 70 L85 35 L115 60 L140 45 L160 75 L160 96 Z" fill="#f5f5f5" opacity="0.12"/><path d="M0 96 L20 75 L50 85 L80 70 L110 82 L140 72 L160 86 L160 96 Z" fill="#f5f5f5" opacity="0.2"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Arcadia</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Marlowe Sky</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">29 May 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:35%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Velvet Static: soft wave -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#3a3a3a 0%,#242424 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(245,255,255,0.12);color:#fafafa;position:absolute;top:0.5rem;left:0.5rem;z-index:2">Promo</span>
+              <svg width="100%" height="100%" viewBox="0 0 160 96" preserveAspectRatio="none" style="position:absolute"><path d="M0 60 Q40 40 80 55 T160 50 L160 96 L0 96 Z" fill="#fafafa" opacity="0.08"/><path d="M0 75 Q40 55 80 70 T160 65 L160 96 L0 96 Z" fill="#fafafa" opacity="0.14"/><circle cx="130" cy="25" r="5" fill="#fafafa" opacity="0.8"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Velvet Static</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Kite Harlan</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">12 Jun 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:60%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Cedar & Honey: minimal sun -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#eeeae4 0%,#d9d3c8 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(0,0,0,0.08);color:var(--text-secondary);position:absolute;top:0.5rem;left:0.5rem;z-index:2">Planning</span>
+              <svg width="64" height="64" viewBox="0 0 64 64" style="position:relative"><circle cx="32" cy="32" r="12" fill="none" stroke="#1a1a1a" stroke-width="1"/><circle cx="32" cy="32" r="6" fill="#1a1a1a"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Cedar & Honey</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Orra Lane</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">12 Jun 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:60%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Deadreckon: line chart -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#f4f4f4 0%,#e4e4e4 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(0,0,0,0.08);color:var(--text-secondary);position:absolute;top:0.5rem;left:0.5rem;z-index:2">Released</span>
+              <svg width="100%" height="100%" viewBox="0 0 160 96" preserveAspectRatio="none"><path d="M10 70 L40 40 L65 55 L95 25 L130 45 L150 30" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="40" cy="40" r="2.5" fill="#1a1a1a"/><circle cx="95" cy="25" r="2.5" fill="#1a1a1a"/><circle cx="150" cy="30" r="2.5" fill="#1a1a1a"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Deadreckon</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Juno Palm</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">2 May 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:100%;height:100%;background:#1a1a1a;border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Ember Pact: single geometric shape -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#1f1f1f 0%,#2e2e2e 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(245,255,255,0.12);color:#fafafa;position:absolute;top:0.5rem;left:0.5rem;z-index:2">Active</span>
+              <svg width="60" height="60" viewBox="0 0 60 60" style="position:relative"><path d="M30 6 L54 48 L6 48 Z" fill="none" stroke="#fafafa" stroke-width="1" opacity="0.6"/><circle cx="30" cy="32" r="4" fill="#fafafa"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Ember Pact</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Sable Roux</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">5 Jul 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:45%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Lowtide: fading lines -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#ececec 0%,#dcdcdc 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(0,0,0,0.08);color:var(--text-secondary);position:absolute;top:0.5rem;left:0.5rem;z-index:2">Planning</span>
+              <svg width="100%" height="100%" viewBox="0 0 160 96" preserveAspectRatio="none"><line x1="20" y1="20" x2="140" y2="20" stroke="#1a1a1a" stroke-width="1.5" opacity="1"/><line x1="20" y1="35" x2="140" y2="35" stroke="#1a1a1a" stroke-width="1.5" opacity="0.7"/><line x1="20" y1="50" x2="140" y2="50" stroke="#1a1a1a" stroke-width="1.5" opacity="0.5"/><line x1="20" y1="65" x2="140" y2="65" stroke="#1a1a1a" stroke-width="1.5" opacity="0.3"/><line x1="20" y1="80" x2="140" y2="80" stroke="#1a1a1a" stroke-width="1.5" opacity="0.15"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Lowtide</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Nine Twenty</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">14 Aug 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:10%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Analog Soul: nested squares -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#f4f4f4 0%,#e8e8e8 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(0,0,0,0.08);color:var(--text-secondary);position:absolute;top:0.5rem;left:0.5rem;z-index:2">Promo</span>
+              <svg width="72" height="72" viewBox="0 0 72 72"><rect x="10" y="10" width="52" height="52" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1"/><rect x="20" y="20" width="32" height="32" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.6"/><rect x="28" y="28" width="16" height="16" rx="1" fill="#1a1a1a"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Analog Soul</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Petra Vox</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">28 Jun 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:70%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Runaway Signal: network dots -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#262626 0%,#1a1a1a 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(245,255,255,0.12);color:#fafafa;position:absolute;top:0.5rem;left:0.5rem;z-index:2">Active</span>
+              <svg width="100%" height="100%" viewBox="0 0 160 96" preserveAspectRatio="none"><line x1="30" y1="30" x2="85" y2="55" stroke="#fafafa" stroke-width="1" opacity="0.35"/><line x1="85" y1="55" x2="130" y2="25" stroke="#fafafa" stroke-width="1" opacity="0.35"/><line x1="85" y1="55" x2="140" y2="70" stroke="#fafafa" stroke-width="1" opacity="0.35"/><line x1="30" y1="30" x2="40" y2="70" stroke="#fafafa" stroke-width="1" opacity="0.35"/><circle cx="30" cy="30" r="4" fill="#fafafa"/><circle cx="85" cy="55" r="5" fill="#fafafa" opacity="0.9"/><circle cx="130" cy="25" r="3" fill="#fafafa"/><circle cx="40" cy="70" r="2.5" fill="#fafafa" opacity="0.7"/><circle cx="140" cy="70" r="3" fill="#fafafa"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Runaway Signal</div>
+              <div style="font-size:0.75rem;color:var(--accent)">Blythe Orson</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">9 Jul 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:50%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+          <!-- Marigold: concentric circles -->
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:0.5rem;overflow:hidden">
+            <div style="height:6rem;background:linear-gradient(135deg,#efefef 0%,#dbdbdb 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <span style="font-size:0.625rem;font-weight:600;padding:0.25rem 0.5rem;border-radius:100px;background:rgba(0,0,0,0.08);color:var(--text-secondary);position:absolute;top:0.5rem;left:0.5rem;z-index:2">Planning</span>
+              <svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="3" fill="#1a1a1a"/><circle cx="36" cy="36" r="10" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.7"/><circle cx="36" cy="36" r="20" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.4"/><circle cx="36" cy="36" r="30" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.18"/></svg>
+            </div>
+            <div style="padding:0.75rem">
+              <div style="font-size:0.8125rem;font-weight:600">Marigold</div>
+              <div style="font-size:0.75rem;color:var(--accent)">West Canyon</div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);margin-top:0.375rem">21 Aug 2026</div>
+              <div style="height:3px;background:rgba(0,0,0,0.06);border-radius:2px;margin-top:0.5rem"><div style="width:20%;height:100%;background:var(--accent);border-radius:2px"></div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Loading overlay (shown during scroll transition) -->
+        <div id="showcaseLoading" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.25rem;opacity:0;pointer-events:none">
+          <div style="font-size:0.6875rem;color:rgba(0,0,0,0.35);letter-spacing:0.06em;text-transform:uppercase;font-weight:700">Opening release</div>
+          <div id="showcaseLoadingLabel" style="font-size:0.9375rem;font-weight:500;color:#111;letter-spacing:-0.01em">Release loading...</div>
+          <div style="width:min(22rem,60%);height:4px;background:rgba(0,0,0,0.06);border-radius:100px;overflow:hidden">
+            <div id="showcaseLoadingFill" style="height:100%;width:0%;background:linear-gradient(90deg,#F56002,#111);border-radius:inherit"></div>
+          </div>
+        </div>
+
+        <!-- Timeline view (shown after loading) -->
+        <div id="showcaseTimeline" style="position:absolute;inset:0;padding:1.25rem;opacity:0;pointer-events:none;display:flex;flex-direction:column;gap:1rem;background:#fafaf7;z-index:5">
+
+          <!-- Header: release meta + filters -->
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:0.75rem">
+              <div style="width:2.25rem;height:2.25rem;border-radius:0.375rem;background:linear-gradient(180deg,#2a2a2a 0%,#1a1a1a 100%);flex-shrink:0;overflow:hidden;position:relative">
+                <svg width="100%" height="100%" viewBox="0 0 36 36" style="position:absolute;inset:0"><circle cx="27" cy="11" r="3.5" fill="#f5f5f5" opacity="0.9"/><path d="M0 36 L7 20 L14 25 L20 13 L27 22 L34 17 L36 30 L36 36 Z" fill="#f5f5f5" opacity="0.2"/></svg>
+              </div>
+              <div>
+                <div style="font-size:1.0625rem;font-weight:700;color:#111;letter-spacing:-0.01em">Arcadia</div>
+                <div style="font-size:0.75rem;color:rgba(0,0,0,0.5)">Marlowe Sky · Release · 29 May 2026</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:0.375rem;align-items:center">
+              <div style="font-size:0.75rem;font-weight:600;padding:0.375rem 0.75rem;border-radius:100px;background:#111;color:#fff">All tasks · 11</div>
+              <div style="font-size:0.75rem;padding:0.375rem 0.75rem;border-radius:100px;border:1px solid rgba(0,0,0,0.08);color:var(--text-secondary);background:#fff">Marketing · 3</div>
+              <div style="font-size:0.75rem;padding:0.375rem 0.75rem;border-radius:100px;border:1px solid rgba(0,0,0,0.08);color:var(--text-secondary);background:#fff">Social · 2</div>
+              <div style="font-size:0.75rem;padding:0.375rem 0.75rem;border-radius:100px;border:1px solid rgba(0,0,0,0.08);color:var(--text-secondary);background:#fff">+ 4</div>
+            </div>
+          </div>
+
+          <!-- Week indicator -->
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.6875rem;color:rgba(0,0,0,0.4);padding:0 0.25rem">
+            <span style="font-weight:700;text-transform:uppercase;letter-spacing:0.06em">Week of 13 Mar</span>
+            <div style="flex:1;height:1px;background:rgba(0,0,0,0.08)"></div>
+            <span>11 tasks · 1 late · 3 done</span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0.625rem;flex:1;min-height:0">
+
+            <!-- FRI 13 -->
+            <div style="display:flex;flex-direction:column;gap:0.5rem;min-width:0">
+              <div style="padding:0.625rem 0.75rem;border-radius:0.5rem;background:#fff;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:baseline;gap:0.375rem">
+                <strong style="color:#111;font-weight:700;font-size:1.125rem">13</strong><span style="font-size:0.75rem;color:rgba(0,0,0,0.5)">Fri</span>
+              </div>
+              <div style="background:#fff;border:1px solid rgba(16,185,129,0.25);border-radius:0.625rem;overflow:hidden;opacity:0.75">
+                <div style="height:3px;background:#10b981"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.55);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Done</span><span>9 AM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">Finalise cover artwork v4</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(245,96,2,0.1);color:#c2410c">Marketing</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#ef4444);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">JR</div></div>
+                </div>
+              </div>
+              <div style="background:#fff;border:1px solid rgba(16,185,129,0.25);border-radius:0.625rem;overflow:hidden;opacity:0.75">
+                <div style="height:3px;background:#10b981"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.55);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Done</span><span>2 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">Pre-save link QA across DSPs</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(59,130,246,0.1);color:#1d4ed8">Distribution</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#6366f1);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">SL</div></div>
+                </div>
+              </div>
+              <div style="background:#fff;border:1px solid rgba(16,185,129,0.25);border-radius:0.625rem;overflow:hidden;opacity:0.75">
+                <div style="height:3px;background:#10b981"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.55);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Done</span><span>5 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">Brief press photographer</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(239,68,68,0.1);color:#b91c1c">PR</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#ec4899,#8b5cf6);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">MK</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SAT 14 -->
+            <div style="display:flex;flex-direction:column;gap:0.5rem;min-width:0">
+              <div style="padding:0.625rem 0.75rem;border-radius:0.5rem;background:#fff;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:baseline;gap:0.375rem">
+                <strong style="color:#111;font-weight:700;font-size:1.125rem">14</strong><span style="font-size:0.75rem;color:rgba(0,0,0,0.5)">Sat</span>
+              </div>
+              <div style="background:linear-gradient(180deg,#fdf4ff 0%,#fff 40%);border:1px solid rgba(236,72,153,0.25);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#ec4899"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.55);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#F56002"></span>Active</span><span>11 AM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.4375rem">Instagram teaser #1</div>
+                  <div style="aspect-ratio:4/3;border-radius:0.375rem;background:linear-gradient(135deg,#fce7f3,#f9a8d4);margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="5" stroke="#be185d" stroke-width="1.5"/><circle cx="14" cy="14" r="5" stroke="#be185d" stroke-width="1.5"/><circle cx="20" cy="8" r="1.5" fill="#be185d"/></svg></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(236,72,153,0.1);color:#be185d">Social</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#3b82f6);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">AK</div></div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(180deg,#fdf4ff 0%,#fff 40%);border:1px solid rgba(236,72,153,0.25);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#ec4899"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.55);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#F56002"></span>Active</span><span>4 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">TikTok challenge launch</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(236,72,153,0.1);color:#be185d">Social</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#f97316,#ef4444);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">TB</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUN 15 (Today) -->
+            <div style="display:flex;flex-direction:column;gap:0.5rem;min-width:0">
+              <div style="padding:0.625rem 0.75rem;border-radius:0.5rem;background:#111;color:#fff;display:flex;align-items:center;justify-content:space-between">
+                <span style="display:flex;align-items:baseline;gap:0.375rem"><strong style="color:#fff;font-weight:700;font-size:1.125rem">15</strong><span style="font-size:0.75rem;color:rgba(255,255,255,0.65)">Sun</span></span>
+                <span style="font-size:0.5625rem;background:#F56002;color:#fff;padding:0.1875rem 0.5rem;border-radius:100px;font-weight:700;letter-spacing:0.04em">TODAY</span>
+              </div>
+              <div style="background:linear-gradient(180deg,#fef2f2 0%,#fff 40%);border:1.5px solid rgba(239,68,68,0.4);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#ef4444"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:#b91c1c;margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:700"><span style="width:6px;height:6px;border-radius:50%;background:#ef4444"></span>LATE · 2 DAYS</span><span>10 AM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">Spotify playlist pitch</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(16,185,129,0.12);color:#047857">A&amp;R</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">DR</div></div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(180deg,#fef3c7 0%,#fff 40%);border:1px solid rgba(245,96,2,0.25);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#F56002"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.55);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#F56002"></span>Active</span><span>3 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.4375rem">Upload Spotify Canvas</div>
+                  <div style="height:2.75rem;border-radius:0.375rem;background:linear-gradient(135deg,#1e1b4b,#5b21b6);margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;position:relative"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><polygon points="4,2 12,7 4,12" fill="#fff" opacity="0.9"/></svg></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(139,92,246,0.12);color:#6d28d9">Content</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#a855f7,#ec4899);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">NL</div></div>
+                </div>
+              </div>
+              <div style="background:#fff;border:1px solid rgba(245,96,2,0.25);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#F56002"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.55);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#F56002"></span>Active</span><span>6 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.25rem">Send fan newsletter</div>
+                  <div style="font-size:0.6875rem;color:rgba(0,0,0,0.55);margin-bottom:0.5rem">28,430 subscribers</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(245,96,2,0.1);color:#c2410c">Marketing</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#ef4444);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">JR</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MON 16 -->
+            <div style="display:flex;flex-direction:column;gap:0.5rem;min-width:0">
+              <div style="padding:0.625rem 0.75rem;border-radius:0.5rem;background:#fff;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:baseline;gap:0.375rem">
+                <strong style="color:#111;font-weight:700;font-size:1.125rem">16</strong><span style="font-size:0.75rem;color:rgba(0,0,0,0.5)">Mon</span>
+              </div>
+              <div style="background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#94a3b8"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.5);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#94a3b8"></span>Pending</span><span>8 AM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">Press embargo lifts</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(239,68,68,0.1);color:#b91c1c">PR</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#ec4899,#8b5cf6);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">MK</div></div>
+                </div>
+              </div>
+              <div style="background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#94a3b8"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.5);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#94a3b8"></span>Pending</span><span>12 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">Radio plugger follow-up</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(14,165,233,0.12);color:#0369a1">Radio</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#06b6d4);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">RV</div></div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(180deg,#ecfdf5 0%,#fff 40%);border:1px solid rgba(132,204,22,0.3);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#84cc16"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.5);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#94a3b8"></span>Pending</span><span>3 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.5rem">Merch store go-live</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(132,204,22,0.18);color:#4d7c0f">Commerce</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#84cc16,#65a30d);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">EO</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TUE 17 (Release Day) -->
+            <div style="display:flex;flex-direction:column;gap:0.5rem;min-width:0">
+              <div style="padding:0.625rem 0.75rem;border-radius:0.5rem;background:#fff;border:1px solid rgba(245,96,2,0.3);display:flex;align-items:center;justify-content:space-between">
+                <span style="display:flex;align-items:baseline;gap:0.375rem"><strong style="color:#111;font-weight:700;font-size:1.125rem">17</strong><span style="font-size:0.75rem;color:rgba(0,0,0,0.5)">Tue</span></span>
+                <span style="font-size:0.5625rem;background:rgba(245,96,2,0.12);color:#c2410c;padding:0.1875rem 0.4375rem;border-radius:100px;font-weight:700;letter-spacing:0.04em">RELEASE</span>
+              </div>
+              <div style="background:linear-gradient(180deg,#f5f3ff 0%,#fff 40%);border:1px solid rgba(139,92,246,0.3);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#8b5cf6"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.5);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#94a3b8"></span>Pending</span><span>10 AM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.4375rem">Lyric video premiere</div>
+                  <div style="aspect-ratio:16/9;border-radius:0.375rem;background:linear-gradient(135deg,#8b5cf6,#ec4899);margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;position:relative"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polygon points="6,3 15,9 6,15" fill="#fff"/></svg><span style="position:absolute;bottom:4px;right:5px;font-size:0.5rem;color:#fff;font-weight:700;background:rgba(0,0,0,0.5);padding:1px 4px;border-radius:3px">3:24</span></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(139,92,246,0.12);color:#6d28d9">Video</span><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#a855f7,#ec4899);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">NL</div></div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(180deg,#fff7ed 0%,#fff 40%);border:1px solid rgba(245,96,2,0.3);border-radius:0.625rem;overflow:hidden">
+                <div style="height:3px;background:#F56002"></div>
+                <div style="padding:0.625rem 0.75rem">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:rgba(0,0,0,0.5);margin-bottom:0.375rem"><span style="display:flex;align-items:center;gap:0.3125rem;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#94a3b8"></span>Pending</span><span>7 PM</span></div>
+                  <div style="font-size:0.8125rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:0.25rem">Launch party · Brooklyn</div>
+                  <div style="font-size:0.6875rem;color:rgba(0,0,0,0.55);margin-bottom:0.5rem">Baby's All Right · 180 RSVPs</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.1875rem 0.4375rem;border-radius:100px;background:rgba(245,96,2,0.12);color:#c2410c">Events</span><div style="display:flex"><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#3b82f6);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-right:-5px;z-index:2">AK</div><div style="width:1.25rem;height:1.25rem;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#ef4444);border:1.5px solid #fff;font-size:0.5625rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">JR</div></div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Dialog hidden per user request -->
+      <dialog class="ai-dialog" id="aiDialog" style="display:none">
+        <div class="ai-dialog__welcome" id="aiWelcome">Hi, I'm TeamMate.</div>
+        <div class="ai-dialog__question" id="aiQuestion">Plan a release strategy</div>
+        <div class="ai-dialog__answer" id="aiAnswer">...</div>
+        <div class="ai-dialog__prompt">
+          <textarea class="ai-dialog__textarea" id="aiTextarea"></textarea>
+          <button class="ai-dialog__submit" id="aiSubmit"><svg viewBox="0 0 12 12"><path d="M1 6h10M7 2l4 4-4 4"/></svg></button>
+        </div>
+        <a href="#" class="ai-dialog__cta" id="aiCta">Book a demo</a>
+      </dialog>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     DESIGN / TEMPLATES
+     ═══════════════════════════════════════════ -->
+<section class="features-section" id="featuresSection">
+  <div class="container container--center">
+    <div class="section-intro">
+      <h2 class="headline-lg">The all-in-one<br><span class="nyght" style="color:#111">release platform</span></h2>
+      <p class="body-lg">Every tool your team needs to plan, coordinate, and launch — in one place.</p>
+    </div>
+  </div>
+
+  <div class="features-spotlight" id="featuresSpotlight">
+    <!-- Feature list (left on desktop, full-width cards on mobile) -->
+    <div class="features-list" role="tablist">
+      <button class="feature-card is-active" data-feature="timeline" role="tab" aria-selected="true">
+        <div class="feature-card__title"><span class="feature-card__marker"></span>Intuitive Timeline</div>
+        <div class="feature-card__desc">Plan and visualize your entire release schedule with a drag-and-drop timeline that keeps everyone aligned.</div>
+        <div class="feature-card__preview-mobile">
+          <div class="features-preview">
+            <div class="features-preview__panel is-active">
+              <div class="ph-timeline">
+                <div class="ph-timeline__row"><div class="ph-timeline__label">Artwork</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:5%;right:55%;background:linear-gradient(90deg,#F56002,#ff8533)"></div></div></div>
+                <div class="ph-timeline__row"><div class="ph-timeline__label">Pre-save</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:20%;right:35%;background:linear-gradient(90deg,#3B82F6,#60a5fa)"></div></div></div>
+                <div class="ph-timeline__row"><div class="ph-timeline__label">Press</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:40%;right:15%;background:linear-gradient(90deg,#8B5CF6,#a78bfa)"></div></div></div>
+                <div class="ph-timeline__row"><div class="ph-timeline__label">Release</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:70%;right:5%;background:linear-gradient(90deg,#FAD604,#fbe046)"></div></div></div>
+              </div>
+              <div class="features-preview__panel-label">Timeline</div>
+            </div>
+          </div>
+        </div>
+      </button>
+
+      <button class="feature-card" data-feature="ai" role="tab" aria-selected="false">
+        <div class="feature-card__title"><span class="feature-card__marker"></span>AI TeamMate</div>
+        <div class="feature-card__desc">Your AI assistant that understands your artist, drafts marketing copy, and handles repetitive rollout tasks.</div>
+        <div class="feature-card__preview-mobile">
+          <div class="features-preview">
+            <div class="features-preview__panel is-active">
+              <div class="ph-chat">
+                <div class="ph-chat__user-row">
+                  <div class="ph-chat__avatar ph-chat__avatar--user">SL</div>
+                  <div class="ph-chat__bubble ph-chat__bubble--user">Draft launch day social posts</div>
+                </div>
+                <div class="ph-chat__ai-row">
+                  <div class="ph-chat__avatar ph-chat__avatar--ai"><img src="https://siteamrollouts.github.io/team-website/assets/teammate-avatar-round.png" alt="TeamMate"></div>
+                  <div class="ph-chat__bubble ph-chat__bubble--ai">I've drafted three variants for Instagram, TikTok, and X — each tuned to your artist's voice.</div>
+                </div>
+                <div class="ph-chat__input">Ask TeamMate anything...<div class="ph-chat__input-send"></div></div>
+              </div>
+              <div class="features-preview__panel-label">TeamMate AI</div>
+            </div>
+          </div>
+        </div>
+      </button>
+
+      <button class="feature-card" data-feature="intel" role="tab" aria-selected="false">
+        <div class="feature-card__title"><span class="feature-card__marker"></span>Artist Intelligence</div>
+        <div class="feature-card__desc">Deep research on your artist's market position, audience demographics, and competitive landscape.</div>
+        <div class="feature-card__preview-mobile">
+          <div class="features-preview">
+            <div class="features-preview__panel is-active">
+              <div class="ph-intel">
+                <div class="ph-intel__stat"><div class="ph-intel__stat-label">Monthly Listeners</div><div class="ph-intel__stat-value">2.4M</div><div class="ph-intel__stat-change">+12.3%</div></div>
+                <div class="ph-intel__stat"><div class="ph-intel__stat-label">Save Rate</div><div class="ph-intel__stat-value">34%</div><div class="ph-intel__stat-change">+4.1%</div></div>
+                <div class="ph-intel__chart"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 50 Q30 35 50 32 T100 18 T150 12 T200 5" fill="none" stroke="var(--accent)" stroke-width="2"/><path d="M0 50 Q30 35 50 32 T100 18 T150 12 T200 5 L200 60 L0 60 Z" fill="url(#grad1)" opacity="0.2"/><defs><linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F56002"/><stop offset="1" stop-color="#F56002" stop-opacity="0"/></linearGradient></defs></svg></div>
+              </div>
+              <div class="features-preview__panel-label">Intelligence</div>
+            </div>
+          </div>
+        </div>
+      </button>
+
+      <button class="feature-card" data-feature="rollout" role="tab" aria-selected="false">
+        <div class="feature-card__title"><span class="feature-card__marker"></span>Rollout Plans</div>
+        <div class="feature-card__desc">Pre-built and customizable rollout templates that adapt to your release type and team workflow.</div>
+        <div class="feature-card__preview-mobile">
+          <div class="features-preview">
+            <div class="features-preview__panel is-active">
+              <div class="ph-rollout">
+                <div class="ph-rollout__row is-done"><div class="ph-rollout__check is-done"></div><div class="ph-rollout__label">Finalize artwork</div></div>
+                <div class="ph-rollout__row is-done"><div class="ph-rollout__check is-done"></div><div class="ph-rollout__label">Submit to DSPs</div></div>
+                <div class="ph-rollout__row"><div class="ph-rollout__check"></div><div class="ph-rollout__label">Pitch for playlisting</div></div>
+                <div class="ph-rollout__row"><div class="ph-rollout__check"></div><div class="ph-rollout__label">Schedule social posts</div></div>
+                <div class="ph-rollout__row"><div class="ph-rollout__check"></div><div class="ph-rollout__label">Coordinate press</div></div>
+              </div>
+              <div class="features-preview__panel-label">Rollout Plans</div>
+            </div>
+          </div>
+        </div>
+      </button>
+
+      <button class="feature-card" data-feature="budget" role="tab" aria-selected="false">
+        <div class="feature-card__title"><span class="feature-card__marker"></span>Budget Tracking</div>
+        <div class="feature-card__desc">Track spend across marketing, production, and promotion with real-time budget dashboards.</div>
+        <div class="feature-card__preview-mobile">
+          <div class="features-preview">
+            <div class="features-preview__panel is-active">
+              <div class="ph-budget">
+                <div class="ph-budget__donut"><div class="ph-budget__total"><div class="ph-budget__total-label">Spent</div><div class="ph-budget__total-value">$48k</div></div></div>
+                <div class="ph-budget__legend">
+                  <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#F56002"></span>Marketing · 38%</div>
+                  <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#ffb37a"></span>Production · 22%</div>
+                  <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#1f1f1f"></span>Promo · 22%</div>
+                  <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#e5e5e0"></span>Other · 18%</div>
+                </div>
+              </div>
+              <div class="features-preview__panel-label">Budget</div>
+            </div>
+          </div>
+        </div>
+      </button>
+
+      <button class="feature-card" data-feature="collab" role="tab" aria-selected="false">
+        <div class="feature-card__title"><span class="feature-card__marker"></span>Team Collaboration</div>
+        <div class="feature-card__desc">Built-in chat, file sharing, and task assignments keep your entire team connected and productive.</div>
+        <div class="feature-card__preview-mobile">
+          <div class="features-preview">
+            <div class="features-preview__panel is-active">
+              <div class="ph-collab">
+                <div class="ph-collab__row"><div class="ph-collab__avatar" style="background:#F56002">KF</div><div class="ph-collab__content"><strong>Kedar</strong> assigned you a task</div><div class="ph-collab__time">2m</div></div>
+                <div class="ph-collab__row"><div class="ph-collab__avatar" style="background:#3B82F6">JK</div><div class="ph-collab__content"><strong>Jake</strong> uploaded final master</div><div class="ph-collab__time">1h</div></div>
+                <div class="ph-collab__row"><div class="ph-collab__avatar" style="background:#8B5CF6">AR</div><div class="ph-collab__content"><strong>Aaron</strong> approved campaign brief</div><div class="ph-collab__time">3h</div></div>
+              </div>
+              <div class="features-preview__panel-label">Collaboration</div>
+            </div>
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <!-- Preview panel (right on desktop, hidden on mobile) -->
+    <div class="features-preview" aria-hidden="true">
+      <div class="features-preview__panel is-active" data-feature="timeline">
+        <div class="ph-timeline">
+          <div class="ph-timeline__row"><div class="ph-timeline__label">Artwork</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:5%;right:55%;background:linear-gradient(90deg,#F56002,#ff8533)"></div></div></div>
+          <div class="ph-timeline__row"><div class="ph-timeline__label">Pre-save</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:20%;right:35%;background:linear-gradient(90deg,#3B82F6,#60a5fa)"></div></div></div>
+          <div class="ph-timeline__row"><div class="ph-timeline__label">Press</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:40%;right:15%;background:linear-gradient(90deg,#8B5CF6,#a78bfa)"></div></div></div>
+          <div class="ph-timeline__row"><div class="ph-timeline__label">Socials</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:55%;right:10%;background:linear-gradient(90deg,#EC4899,#f472b6)"></div></div></div>
+          <div class="ph-timeline__row"><div class="ph-timeline__label">Release</div><div class="ph-timeline__track"><div class="ph-timeline__bar" style="left:70%;right:5%;background:linear-gradient(90deg,#FAD604,#fbe046)"></div></div></div>
+        </div>
+        <div class="features-preview__panel-label">Timeline</div>
+      </div>
+
+      <div class="features-preview__panel" data-feature="ai">
+        <div class="ph-chat">
+          <div class="ph-chat__user-row">
+            <div class="ph-chat__avatar ph-chat__avatar--user">SL</div>
+            <div class="ph-chat__bubble ph-chat__bubble--user">Draft launch day social posts</div>
+          </div>
+          <div class="ph-chat__ai-row">
+            <div class="ph-chat__avatar ph-chat__avatar--ai"><img src="https://siteamrollouts.github.io/team-website/assets/teammate-avatar-round.png" alt="TeamMate"></div>
+            <div class="ph-chat__bubble ph-chat__bubble--ai">I've drafted three variants for Instagram, TikTok, and X — each tuned to your artist's voice. Want me to schedule them?</div>
+          </div>
+          <div class="ph-chat__input">Ask TeamMate anything...<div class="ph-chat__input-send"></div></div>
+        </div>
+        <div class="features-preview__panel-label">TeamMate AI</div>
+      </div>
+
+      <div class="features-preview__panel" data-feature="intel">
+        <div class="ph-intel">
+          <div class="ph-intel__stat"><div class="ph-intel__stat-label">Monthly Listeners</div><div class="ph-intel__stat-value">2.4M</div><div class="ph-intel__stat-change">+12.3%</div></div>
+          <div class="ph-intel__stat"><div class="ph-intel__stat-label">Save Rate</div><div class="ph-intel__stat-value">34%</div><div class="ph-intel__stat-change">+4.1%</div></div>
+          <div class="ph-intel__chart"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 50 Q30 35 50 32 T100 18 T150 12 T200 5" fill="none" stroke="var(--accent)" stroke-width="2"/><path d="M0 50 Q30 35 50 32 T100 18 T150 12 T200 5 L200 60 L0 60 Z" fill="url(#grad2)" opacity="0.2"/><defs><linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F56002"/><stop offset="1" stop-color="#F56002" stop-opacity="0"/></linearGradient></defs></svg></div>
+        </div>
+        <div class="features-preview__panel-label">Intelligence</div>
+      </div>
+
+      <div class="features-preview__panel" data-feature="rollout">
+        <div class="ph-rollout">
+          <div class="ph-rollout__row is-done"><div class="ph-rollout__check is-done"></div><div class="ph-rollout__label">Finalize artwork</div></div>
+          <div class="ph-rollout__row is-done"><div class="ph-rollout__check is-done"></div><div class="ph-rollout__label">Submit to DSPs</div></div>
+          <div class="ph-rollout__row is-done"><div class="ph-rollout__check is-done"></div><div class="ph-rollout__label">Set up pre-save</div></div>
+          <div class="ph-rollout__row"><div class="ph-rollout__check"></div><div class="ph-rollout__label">Pitch for playlisting</div></div>
+          <div class="ph-rollout__row"><div class="ph-rollout__check"></div><div class="ph-rollout__label">Schedule social posts</div></div>
+          <div class="ph-rollout__row"><div class="ph-rollout__check"></div><div class="ph-rollout__label">Coordinate press</div></div>
+        </div>
+        <div class="features-preview__panel-label">Rollout Plans</div>
+      </div>
+
+      <div class="features-preview__panel" data-feature="budget">
+        <div class="ph-budget">
+          <div class="ph-budget__donut"><div class="ph-budget__total"><div class="ph-budget__total-label">Spent</div><div class="ph-budget__total-value">$48k</div></div></div>
+          <div class="ph-budget__legend">
+            <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#F56002"></span>Marketing · 38%</div>
+            <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#ffb37a"></span>Production · 22%</div>
+            <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#1f1f1f"></span>Promo · 22%</div>
+            <div class="ph-budget__legend-row"><span class="ph-budget__legend-dot" style="background:#e5e5e0"></span>Other · 18%</div>
+          </div>
+        </div>
+        <div class="features-preview__panel-label">Budget</div>
+      </div>
+
+      <div class="features-preview__panel" data-feature="collab">
+        <div class="ph-collab">
+          <div class="ph-collab__row"><div class="ph-collab__avatar" style="background:#F56002">KF</div><div class="ph-collab__content"><strong>Kedar</strong> assigned you a task</div><div class="ph-collab__time">2m</div></div>
+          <div class="ph-collab__row"><div class="ph-collab__avatar" style="background:#3B82F6">JK</div><div class="ph-collab__content"><strong>Jake</strong> uploaded final master</div><div class="ph-collab__time">1h</div></div>
+          <div class="ph-collab__row"><div class="ph-collab__avatar" style="background:#8B5CF6">AR</div><div class="ph-collab__content"><strong>Aaron</strong> approved campaign brief</div><div class="ph-collab__time">3h</div></div>
+          <div class="ph-collab__row"><div class="ph-collab__avatar" style="background:#10B981">SL</div><div class="ph-collab__content"><strong>Simon</strong> commented on timeline</div><div class="ph-collab__time">5h</div></div>
+        </div>
+        <div class="features-preview__panel-label">Collaboration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     BRAIN — Video showcase
+     ═══════════════════════════════════════════ -->
+<section class="brain-section" id="brainSection">
+  <div class="container container--center">
+    <div class="section-intro">
+      <h2 class="headline-lg">Every rollout<br><span class="nyght">builds a brain</span></h2>
+      <p class="body-lg">Each contact, task, observation, and decision becomes a living memory — only ever accessible to you and your team.</p>
+    </div>
+  </div>
+  <div class="brain-video-outer" id="brainVideoOuter">
+    <div class="brain-video-wrap" id="brainVideoWrap">
+      <video class="brain-video" autoplay loop muted playsinline preload="metadata" poster="assets/brain-1-poster.jpg">
+        <source src="https://siteamrollouts.github.io/team-website/assets/brain-1-web.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     INTEGRATIONS — Triple marquee
+     ═══════════════════════════════════════════ -->
+<section class="integrations-section" data-module="marquee">
+  <div class="container container--center">
+    <div class="section-intro" style="max-width:none">
+      <h2 class="headline-lg" style="white-space:nowrap">Connects to your tech stack</h2>
+      <p class="body-lg" style="white-space:nowrap">Works with the tools your team already uses. No migration, no disruption.</p>
+    </div>
+  </div>
+
+  <div class="integrations-marquees" id="integrationsMarquees">
+    <!-- Row 1: Integration brand logos (21 brands) -->
+    <div class="tech-row-wrap">
+      <div class="tech-row" id="techRow1">
+        <a class="tech-logo" title="Asana"><img src="https://cdn.simpleicons.org/asana" alt="Asana"></a>
+        <a class="tech-logo" title="Jira"><img src="https://cdn.simpleicons.org/jira" alt="Jira"></a>
+        <a class="tech-logo" title="Trello"><img src="https://cdn.simpleicons.org/trello" alt="Trello"></a>
+        <a class="tech-logo" title="Notion"><img src="https://cdn.simpleicons.org/notion/111111" alt="Notion"></a>
+        <a class="tech-logo" title="ClickUp"><img src="https://cdn.simpleicons.org/clickup" alt="ClickUp"></a>
+        <a class="tech-logo" title="Linear"><img src="https://cdn.simpleicons.org/linear/5E6AD2" alt="Linear"></a>
+        <a class="tech-logo" title="Monday.com"><img src="https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/monday.svg" alt="Monday.com"></a>
+        <a class="tech-logo" title="Confluence"><img src="https://cdn.simpleicons.org/confluence" alt="Confluence"></a>
+        <a class="tech-logo" title="Slack"><img src="https://svgl.app/library/slack.svg" alt="Slack"></a>
+        <a class="tech-logo" title="Microsoft Teams"><img src="https://svgl.app/library/microsoft-teams.svg" alt="Microsoft Teams"></a>
+        <a class="tech-logo" title="Discord"><img src="https://cdn.simpleicons.org/discord" alt="Discord"></a>
+        <a class="tech-logo" title="Zoom"><img src="https://cdn.simpleicons.org/zoom" alt="Zoom"></a>
+        <a class="tech-logo" title="Gmail"><img src="https://cdn.simpleicons.org/gmail" alt="Gmail"></a>
+        <a class="tech-logo" title="Outlook"><img src="https://svgl.app/library/microsoft-outlook.svg" alt="Outlook"></a>
+        <a class="tech-logo" title="Google Drive"><img src="https://cdn.simpleicons.org/googledrive" alt="Google Drive"></a>
+        <a class="tech-logo" title="Dropbox"><img src="https://cdn.simpleicons.org/dropbox" alt="Dropbox"></a>
+        <a class="tech-logo" title="OneDrive"><img src="https://svgl.app/library/microsoft-onedrive.svg" alt="OneDrive"></a>
+        <a class="tech-logo" title="Word"><img src="https://svgl.app/library/microsoft-word.svg" alt="Word"></a>
+        <a class="tech-logo" title="Excel"><img src="https://svgl.app/library/microsoft-excel.svg" alt="Excel"></a>
+        <a class="tech-logo" title="PowerPoint"><img src="https://svgl.app/library/microsoft-powerpoint.svg" alt="PowerPoint"></a>
+        <a class="tech-logo" title="Figma"><img src="https://cdn.simpleicons.org/figma" alt="Figma"></a>
+        <!-- Duplicate for continuous scroll -->
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/asana" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/jira" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/trello" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/notion/111111" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/clickup" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/linear/5E6AD2" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/monday.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/confluence" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/slack.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-teams.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/discord" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/zoom" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/gmail" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-outlook.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/googledrive" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/dropbox" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-onedrive.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-word.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-excel.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-powerpoint.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/figma" alt=""></a>
+      </div>
+    </div>
+
+    <!-- Row 2: Same brands, offset by ~50% (starts at index 11 of 21) -->
+    <div class="tech-row-wrap">
+      <div class="tech-row" id="techRow2">
+        <a class="tech-logo" title="Discord"><img src="https://cdn.simpleicons.org/discord" alt="Discord"></a>
+        <a class="tech-logo" title="Zoom"><img src="https://cdn.simpleicons.org/zoom" alt="Zoom"></a>
+        <a class="tech-logo" title="Gmail"><img src="https://cdn.simpleicons.org/gmail" alt="Gmail"></a>
+        <a class="tech-logo" title="Outlook"><img src="https://svgl.app/library/microsoft-outlook.svg" alt="Outlook"></a>
+        <a class="tech-logo" title="Google Drive"><img src="https://cdn.simpleicons.org/googledrive" alt="Google Drive"></a>
+        <a class="tech-logo" title="Dropbox"><img src="https://cdn.simpleicons.org/dropbox" alt="Dropbox"></a>
+        <a class="tech-logo" title="OneDrive"><img src="https://svgl.app/library/microsoft-onedrive.svg" alt="OneDrive"></a>
+        <a class="tech-logo" title="Word"><img src="https://svgl.app/library/microsoft-word.svg" alt="Word"></a>
+        <a class="tech-logo" title="Excel"><img src="https://svgl.app/library/microsoft-excel.svg" alt="Excel"></a>
+        <a class="tech-logo" title="PowerPoint"><img src="https://svgl.app/library/microsoft-powerpoint.svg" alt="PowerPoint"></a>
+        <a class="tech-logo" title="Figma"><img src="https://cdn.simpleicons.org/figma" alt="Figma"></a>
+        <a class="tech-logo" title="Asana"><img src="https://cdn.simpleicons.org/asana" alt="Asana"></a>
+        <a class="tech-logo" title="Jira"><img src="https://cdn.simpleicons.org/jira" alt="Jira"></a>
+        <a class="tech-logo" title="Trello"><img src="https://cdn.simpleicons.org/trello" alt="Trello"></a>
+        <a class="tech-logo" title="Notion"><img src="https://cdn.simpleicons.org/notion/111111" alt="Notion"></a>
+        <a class="tech-logo" title="ClickUp"><img src="https://cdn.simpleicons.org/clickup" alt="ClickUp"></a>
+        <a class="tech-logo" title="Linear"><img src="https://cdn.simpleicons.org/linear/5E6AD2" alt="Linear"></a>
+        <a class="tech-logo" title="Monday.com"><img src="https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/monday.svg" alt="Monday.com"></a>
+        <a class="tech-logo" title="Confluence"><img src="https://cdn.simpleicons.org/confluence" alt="Confluence"></a>
+        <a class="tech-logo" title="Slack"><img src="https://svgl.app/library/slack.svg" alt="Slack"></a>
+        <a class="tech-logo" title="Microsoft Teams"><img src="https://svgl.app/library/microsoft-teams.svg" alt="Microsoft Teams"></a>
+        <!-- Duplicate -->
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/discord" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/zoom" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/gmail" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-outlook.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/googledrive" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/dropbox" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-onedrive.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-word.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-excel.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-powerpoint.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/figma" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/asana" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/jira" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/trello" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/notion/111111" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/clickup" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/linear/5E6AD2" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/monday.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://cdn.simpleicons.org/confluence" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/slack.svg" alt=""></a>
+        <a class="tech-logo"><img src="https://svgl.app/library/microsoft-teams.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ═══════════════════════════════════════════
+     FAQ — Two-column sticky accordion
+     ═══════════════════════════════════════════ -->
+<section class="faq-section" id="faqSection">
+  <div class="faq-section__inner">
+    <div class="faq-section__intro">
+      <h2 class="faq-section__headline">Straight answers<br><span class="nyght">no spin.</span></h2>
+      <p class="faq-section__sub">Everything you need to know about Team before you give it a try. Still stuck? Our founders answer demos personally.</p>
+      <a href="https://siteamrollouts.github.io/team-website/demo.html" class="faq-section__cta"><span class="faq-cta-text">Talk to a founder</span> &rarr;</a>
+    </div>
+
+    <div class="faq-list" id="faqList">
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">01</span>
+          <span class="faq-item__q">What exactly is Team?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Team is the operating system for music releases. It replaces the patchwork of spreadsheets, Slack threads, and Notion docs that most release teams stitch together with one connected workspace &mdash; timelines, tasks, budgets, assets, comms, and AI, all in a single view.</p>
+          <p>Whether you're an independent artist shipping your first single or a major label managing hundreds of releases a year, Team adapts to how you actually work.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">02</span>
+          <span class="faq-item__q">Who is Team built for?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Three tiers, three workflows:</p>
+          <p><strong>Artists</strong> &mdash; solo artists and small teams shipping singles and EPs (free tier, built for you).<br><strong>Team</strong> &mdash; independent labels, managers, and mid-sized operations running multiple active rollouts.<br><strong>Enterprise</strong> &mdash; major labels and large management companies with hundreds of releases, multiple rosters, and complex approval flows.</p>
+          <p>Every plan is free for 60 days, no credit card required.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">03</span>
+          <span class="faq-item__q">How is this different from Notion, Asana, or Monday?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Generic project tools don't know what a playlist pitch is, what a DSP window is, or how a release cycle flows. You end up customising templates and rebuilding the same workflows every time.</p>
+          <p>Team is built exclusively for music. Every timeline template, every AI prompt, every integration, every metric &mdash; all shaped by how labels, managers, and artists actually ship music.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">04</span>
+          <span class="faq-item__q">What does TeamMate (the AI) actually do?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>TeamMate is your release co-pilot. It plans rollouts from a brief, drafts social copy in your artist's voice, flags overdue tasks and risk before they become fires, generates status updates for stakeholders, and answers questions about any release in plain language.</p>
+          <p>It learns from your team's patterns over time, so the longer you use it, the sharper its suggestions become.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">05</span>
+          <span class="faq-item__q">Can I connect Team to tools I already use?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Yes. Team connects to Spotify for Artists, Apple Music for Artists, distributors, social platforms, Slack, Google Workspace, Dropbox, and more. Pull streaming data, push release updates, sync calendars, bring assets in &mdash; all without leaving Team.</p>
+          <p>Enterprise plans include custom integrations and API access.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">06</span>
+          <span class="faq-item__q">What's the 60-day free trial catch?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>None. No credit card required, full feature access on every plan for 60 days. Most teams decide within the first two weeks &mdash; we give you 60 days because a real release cycle takes that long, and we want you to ship one on Team before you pay a cent.</p>
+          <p>At the end of the trial, you pick the plan that fits &mdash; or walk away with your data exportable in a single click.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">07</span>
+          <span class="faq-item__q">How long does onboarding take?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Artists and small teams are usually up and running within 15 minutes. Mid-sized teams import their existing workflows and roster in a day. Enterprise rollouts come with dedicated onboarding &mdash; typically 1&ndash;2 weeks to migrate data, configure approvals, and train the team.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">08</span>
+          <span class="faq-item__q">Is my data secure?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Yes. SOC 2 Type II compliant, end-to-end encryption in transit and at rest, role-based access controls, and full audit logs. Enterprise customers get SSO, custom data residency, and dedicated support.</p>
+          <p>Unreleased music and assets are protected &mdash; watermarking, access logs, and expirable share links come standard.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">09</span>
+          <span class="faq-item__q">Can I talk to a real person?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Always. <a href="https://siteamrollouts.github.io/team-website/demo.html">Book a demo</a> and you'll meet one of the founders &mdash; not a sales rep. We want to understand your workflow, show you exactly where Team fits, and answer anything this FAQ didn't cover.</p>
+          <p>Or email us directly at <a href="mailto:hello@teamrollouts.com">hello@teamrollouts.com</a>.</p>
+        </div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     STORIES CAROUSEL
+     ═══════════════════════════════════════════ -->
+<section class="stories-section" id="storiesSection" data-module="carousel">
+  <div class="container container--center">
+    <div class="section-intro" style="max-width:none">
+      <h2 class="headline-lg" style="white-space:nowrap">Ready to transform your next release?</h2>
+      <p class="body-lg" style="white-space:nowrap">Experience first-hand how Team eliminates the chaos and brings clarity to your workflow.</p>
+      <a href="https://siteamrollouts.github.io/team-website/pricing.html" class="btn btn--primary" style="margin-top:1.25rem">Start a free trial</a>
+      <div style="font-size:0.8125rem;color:var(--text-secondary);margin-top:0.75rem">No credit card required.</div>
+    </div>
+  </div>
+
+  <div class="stories-carousel">
+    <div class="swiper" id="storiesSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--enterprise">Enterprise</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Amara Johnson</div>
+              <div class="story-card__role">Head of Marketing · Major Label</div>
+              <div class="story-card__quote-text">Team gave our A&amp;R and marketing teams a shared view we never had before.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--artist">Artist</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Marcus Okafor</div>
+              <div class="story-card__role">Independent Artist</div>
+              <div class="story-card__quote-text">Finally one place to plan my release instead of ten different apps.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--team">Team</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Priya Sharma</div>
+              <div class="story-card__role">Artist Manager · Management Company</div>
+              <div class="story-card__quote-text">I manage six artists — Team is the only way I stay on top of it all.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--enterprise">Enterprise</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">James Liu</div>
+              <div class="story-card__role">VP Operations · Major Label</div>
+              <div class="story-card__quote-text">Release planning across 40+ artists used to be chaos. Now it's visible.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--artist">Artist</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Emma Fontaine</div>
+              <div class="story-card__role">Singer-Songwriter</div>
+              <div class="story-card__quote-text">My whole release workflow in one place. Feels like having a tour manager in my pocket.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--team">Team</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">David Harlan</div>
+              <div class="story-card__role">Label Head · Indie Label</div>
+              <div class="story-card__quote-text">Our roster has doubled and our ops team is the same size. Team made that possible.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--enterprise">Enterprise</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Sofia Reyes</div>
+              <div class="story-card__role">A&amp;R Director · Major Label</div>
+              <div class="story-card__quote-text">Artist Intelligence changed how we approach signings and release strategy.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--artist">Artist</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Theo Walsh</div>
+              <div class="story-card__role">Producer / Artist</div>
+              <div class="story-card__quote-text">The AI Teammate drafts my socials in my voice. I don't dread release week anymore.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--team">Team</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Nadia Kim</div>
+              <div class="story-card__role">Day-to-Day Manager · Management Company</div>
+              <div class="story-card__quote-text">Stakeholder updates that used to take hours now generate in a click.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card">
+            <div class="story-card__photo">
+              <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=600&q=80&auto=format&fit=crop" alt="">
+            </div>
+            <div class="story-card__tier story-card__tier--enterprise">Enterprise</div>
+            <div class="story-card__quote">"</div>
+            <div class="story-card__meta">
+              <div class="story-card__name">Marcus Vaughn</div>
+              <div class="story-card__role">Head of Distribution · Major Label</div>
+              <div class="story-card__quote-text">Delivery tracking across our global catalogue — all in one dashboard.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════
+     VIDEO MODAL — Demo player
+     ═══════════════════════════════════════════ -->
+<div class="video-modal" id="videoModal" aria-hidden="true">
+  <div class="video-modal__bg" data-modal-close></div>
+  <button class="video-modal__close" data-modal-close aria-label="Close video">
+    <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </button>
+  <div class="video-modal__content">
+    <video id="modalVideo" playsinline controls preload="metadata">
+      <source src="https://siteamrollouts.github.io/team-website/assets/demo.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SIDE NAV — Vertical section dots
+     ═══════════════════════════════════════════ -->
+<nav class="side-nav" id="sideNav" aria-label="Page sections">
+  <div class="side-nav__dot" data-target="uploadSection" data-label="Overview"></div>
+  <div class="side-nav__dot" data-target="engineSection" data-label="TeamMate"></div>
+  <div class="side-nav__dot" data-target="guidelinesSection" data-label="Dashboard"></div>
+  <div class="side-nav__dot" data-target="featuresSection" data-label="Features"></div>
+  <div class="side-nav__dot" data-target="brainSection" data-label="The Brain"></div>
+  <div class="side-nav__dot" data-target="faqSection" data-label="FAQ"></div>
+  <div class="side-nav__dot" data-target="storiesSection" data-label="Get started"></div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     FLOATING CTA — persistent trial button
+     ═══════════════════════════════════════════ -->
+<div class="floating-cta" id="floatingCta">
+  <a href="https://siteamrollouts.github.io/team-website/pricing.html" class="floating-cta__btn">Start a free trial &rarr;</a>
+</div>
+<div class="floating-bar" id="floatingBar">
+  <a href="https://siteamrollouts.github.io/team-website/pricing.html" class="floating-bar__btn">Start a free trial</a>
+</div>
+
+
