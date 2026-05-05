@@ -39,6 +39,10 @@
   --ease:cubic-bezier(0.16,1,0.3,1);
 }
 
+/* Webflow's default a{text-decoration:underline} beats the per-element
+   resets below by source order. Force it off for everything inside the nav. */
+.nav a,.nav-blur-overlay a{text-decoration:none !important}
+
 /* Nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0.875rem 2rem;display:flex;align-items:center;justify-content:space-between;max-width:80rem;margin:0 auto;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1)}
 .nav.nav--hidden{transform:translateY(calc(-100% - 1rem))}
