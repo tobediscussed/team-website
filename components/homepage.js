@@ -1385,7 +1385,7 @@ gsap.ticker.lagSmoothing(0);
   function showGame(){
     if(gameActive) return;
     gameActive = true;
-    frame.src = 'game/index.html';
+    frame.src = 'https://siteamrollouts.github.io/team-website/game/index.html';
     overlay.style.display = 'block';
     // Trigger fade in on next frame
     requestAnimationFrame(function(){ requestAnimationFrame(function(){
