@@ -491,7 +491,7 @@ body.nav-mobile-lock{overflow:hidden}
 }
 .hero-excerpts{
   position:absolute;
-  top:52%;left:50%;transform:translateX(-50%);
+  top:62%;left:50%;transform:translateX(-50%);
   /* Size matches the center tile */
   width:min(26rem, 60vw);aspect-ratio:4/3;
   z-index:100;
