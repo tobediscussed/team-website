@@ -1,0 +1,281 @@
+
+<!-- Hero -->
+<section class="pricing-hero">
+  <h1>Start free.<br><span class="nyght">Upgrade when you're ready.</span></h1>
+  <p>Start using it with no commitment. Free forever for one artist, or unlock the full platform with Pro &mdash; 30 days free.</p>
+  <a href="https://siteamrollouts.github.io/team-website/onboarding.html?plan=pro&amp;period=yearly" class="btn btn--primary-light pricing-hero__cta">
+    <span class="pricing-hero__cta-full">Try Pro free for 30 days</span>
+    <span class="pricing-hero__cta-short">Try Pro free</span>
+  </a>
+</section>
+
+<!-- Billing Toggle -->
+<div class="billing-toggle">
+  <span class="billing-toggle__label is-active" data-period="yearly">Yearly</span>
+  <div class="billing-toggle__switch" id="billingSwitch" role="switch" aria-checked="true" tabindex="0"></div>
+  <span class="billing-toggle__label" data-period="monthly">Monthly</span>
+  <span class="billing-toggle__save">Save ~20%</span>
+</div>
+
+<!-- Pricing Cards (v3 — 2 tiers only: Free + Pro) -->
+<section class="pricing-cards pricing-cards--two">
+
+  <!-- Free -->
+  <div class="pricing-card" data-plan="free">
+    <div class="pricing-card__tier">Free</div>
+    <div class="pricing-card__who">For solo artists getting started</div>
+    <div class="pricing-card__price-row">
+      <span class="pricing-card__amount">$0</span>
+      <span class="pricing-card__period">forever</span>
+    </div>
+    <div class="pricing-card__trial-note" style="visibility:hidden">for 30 days</div>
+    <div class="pricing-card__then">No catch. That's a promise.</div>
+    <div class="pricing-card__billing" style="visibility:hidden">billed annually</div>
+    <a href="https://siteamrollouts.github.io/team-website/onboarding.html?plan=free&amp;period=yearly" class="pricing-card__cta" data-cta><span class="cta-full">Get started free</span><span class="cta-short">Get started</span></a>
+    <div class="pricing-card__divider"></div>
+    <div class="pricing-card__includes-label">Includes:</div>
+    <ul class="pricing-card__features">
+      <li>1 artist</li>
+      <li>Unlimited releases</li>
+      <li>1 seat</li>
+      <li>1 collaborator</li>
+      <li>1 workspace</li>
+      <li>Unlimited stacks</li>
+      <li>TeamMate AI included <span class="feat-info" data-tip="An AI built for music releases — understands the industry, learns your patterns, works 24/7.">i</span></li>
+      <li>Intelligence (Basic) <span class="feat-info" data-tip="Lightweight insights on your release timeline and key tasks.">i</span></li>
+      <li>Rollout Plan</li>
+      <li>Budget Management</li>
+    </ul>
+    <div class="pricing-card__compare"><a href="#compare">What's included</a></div>
+  </div>
+
+  <!-- Pro (highlighted — uses .pricing-card--team styling for the dark premium look) -->
+  <div class="pricing-card pricing-card--team" data-plan="pro" data-yearly="19.99" data-monthly="24.99" data-unit="seat">
+    <div class="pricing-card__tier">Pro</div>
+    <div class="pricing-card__who">For artists, managers, indie labels &amp; teams</div>
+    <div class="pricing-card__limited">Limited time pricing</div>
+    <div class="pricing-card__price-row">
+      <span class="pricing-card__amount">$0</span>
+      <span class="pricing-card__period">/month per seat</span>
+    </div>
+    <div class="pricing-card__trial-note">for 30 days</div>
+    <div class="pricing-card__then" data-then>Then $19.99/month per seat</div>
+    <div class="pricing-card__billing" data-billing>billed yearly</div>
+    <a href="https://siteamrollouts.github.io/team-website/onboarding.html?plan=pro&amp;period=yearly" class="pricing-card__cta" data-cta><span class="cta-full">Start your free trial</span><span class="cta-short">Free trial</span></a>
+    <div class="pricing-card__divider"></div>
+    <div class="pricing-card__includes-label">Everything in Free, plus:</div>
+    <ul class="pricing-card__features">
+      <li>Unlimited artists</li>
+      <li>2 premium seats</li>
+      <li>Unlimited collaborators (Timeline access)</li>
+      <li>Unlimited workspaces</li>
+      <li>TeamMate AI included <span class="feat-info" data-tip="An AI built for music releases — understands the industry, learns your patterns, works 24/7.">i</span></li>
+      <li>Intelligence (Comprehensive) <span class="feat-info" data-tip="Reasoning against your timeline, proactive insights, and a memory that learns your release.">i</span></li>
+      <li>TeamMate Email &amp; Text</li>
+      <li>Press Tour</li>
+      <li>Tour Management <span class="feat-beta">Beta</span></li>
+      <li>Document Ingestion</li>
+      <li>Team Chat</li>
+      <li>Reports &amp; Sharing</li>
+      <li>Command Center</li>
+      <li>Priority support <span class="feat-info" data-tip="Dedicated email support with priority response. We'll reply faster than the queue.">i</span></li>
+    </ul>
+    <div class="pricing-card__compare"><a href="#compare">What's included</a></div>
+  </div>
+
+</section>
+
+<!-- Comparison Table (v3 — Free + Pro only) -->
+<section class="comparison-section" id="compare">
+  <h2>Compare plans</h2>
+  <div class="comparison-scroll">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Free<a href="https://siteamrollouts.github.io/team-website/onboarding.html?plan=free&amp;period=yearly" class="compare-cta">Get started</a></th>
+        <th class="th-team">Pro<a href="https://siteamrollouts.github.io/team-website/onboarding.html?plan=pro&amp;period=yearly" class="compare-cta">Get started</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span># of artists</span></td>
+        <td>1</td>
+        <td class="td-team check">Unlimited</td>
+      </tr>
+      <tr>
+        <td><span># of releases per year</span></td>
+        <td class="check">Unlimited</td>
+        <td class="td-team check">Unlimited</td>
+      </tr>
+      <tr>
+        <td><span>TeamMate AI</span><span class="feat-info" data-tip="An AI built for music releases — understands the industry, learns your patterns, works 24/7.">i</span></td>
+        <td class="check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Intelligence</span><span class="feat-info" data-tip="Pro gets full reasoning against your timeline, proactive insights, and a memory that learns your release.">i</span></td>
+        <td>Basic</td>
+        <td class="td-team check">Comprehensive</td>
+      </tr>
+      <tr>
+        <td><span># of seats</span></td>
+        <td>1</td>
+        <td class="td-team check">2 (premium)</td>
+      </tr>
+      <tr>
+        <td><span>Collaborator type</span></td>
+        <td>1</td>
+        <td class="td-team check">Unlimited (Timeline access)</td>
+      </tr>
+      <tr>
+        <td><span># of workspaces</span></td>
+        <td>1</td>
+        <td class="td-team check">Unlimited</td>
+      </tr>
+      <tr>
+        <td><span># of stacks</span></td>
+        <td class="check">Unlimited</td>
+        <td class="td-team check">Unlimited</td>
+      </tr>
+      <tr>
+        <td><span>TeamMate Email</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>TeamMate Text</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Rollout Plan</span></td>
+        <td class="check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Press Tour</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Tour Management</span><span class="feat-beta">Beta</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Budget Management</span></td>
+        <td class="check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Document Ingestion</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Team Chat</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Reports &amp; Sharing</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Command Center</span></td>
+        <td><span class="dash-icon"><svg viewBox="0 0 12 2"><line x1="2" y1="1" x2="10" y2="1" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round"/></svg></span></td>
+        <td class="td-team check"><span class="check-icon"><svg viewBox="0 0 16 16"><polyline points="3 8 6.5 11.5 13 5"/></svg></span></td>
+      </tr>
+      <tr>
+        <td><span>Customer support</span><span class="feat-info" data-tip="Pro accounts get a dedicated email channel with priority response. Free uses our standard help centre and community.">i</span></td>
+        <td>Standard</td>
+        <td class="td-team check">Priority (dedicated email)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faqSection">
+  <div class="faq-section__inner">
+    <div class="faq-section__intro">
+      <div class="faq-section__label">Pricing</div>
+      <h2 class="faq-section__headline">Questions? <span class="nyght">We've got answers.</span></h2>
+      <p class="faq-section__sub">Everything you need to know about plans, billing, and what happens when your trial ends.</p>
+      <a href="https://siteamrollouts.github.io/team-website/demo.html" class="faq-section__cta">Talk to a founder &rarr;</a>
+    </div>
+
+    <div class="faq-list" id="faqList">
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">01</span>
+          <span class="faq-item__q">What happens after my 30-day trial?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>You choose a plan. All your data is preserved. If you downgrade, excess items become read-only &mdash; nothing is ever deleted.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">02</span>
+          <span class="faq-item__q">What happens to my data if I downgrade?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Nothing is deleted. Items beyond your plan's limits become read-only. You can still view and export them. You choose which items stay active.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">03</span>
+          <span class="faq-item__q">Can I change plans anytime?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Yes. Upgrade or downgrade at any time. Changes take effect on your next billing cycle.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          <span class="faq-item__num">04</span>
+          <span class="faq-item__q">Is there an annual discount?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><line class="v" x1="8" y1="3" x2="8" y2="13"/></svg>
+          </span>
+        </button>
+        <div class="faq-item__answer"><div class="faq-item__answer-inner"><div class="faq-item__answer-content">
+          <p>Yes. The prices shown are annual billing. Monthly billing is also available at a slightly higher rate.</p>
+        </div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="final-cta__card">
+    <h2>Ready to run <span class="nyght">your next release?</span></h2>
+    <div class="final-cta__buttons">
+      <a href="https://siteamrollouts.github.io/team-website/onboarding.html" class="btn btn--primary-light">Start your free trial</a>
+      <a href="https://siteamrollouts.github.io/team-website/demo.html" class="btn btn--ghost">Book a demo</a>
+    </div>
+    <p class="final-cta__note">30-day free trial.</p>
+  </div>
+</section>
+
+<!-- Footer -->
