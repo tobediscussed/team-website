@@ -21,14 +21,6 @@
       main: () => ({ price: '$0', unit: 'for 60 days' }),
       sub: (term) => `Then $${PLANS.pro.price[term].toFixed(2)}/mo, billed ${term}`,
     },
-    team: {
-      name: 'Team',
-      price: { yearly: 51.99, monthly: 64.99 },
-      hasPeriod: true,
-      cta: 'Start my first release',
-      main: () => ({ price: '$0', unit: 'for 60 days' }),
-      sub: (term) => `Then $${PLANS.team.price[term].toFixed(2)}/mo per seat, billed ${term}`,
-    },
     enterprise: {
       name: 'Enterprise',
       hasPeriod: false,
@@ -40,7 +32,7 @@
   };
 
   // State
-  let currentPlan = 'team';
+  let currentPlan = 'pro';
   let currentTerm = 'yearly';
 
   // Elements
@@ -155,9 +147,9 @@
     currentTerm = t; renderTermState(); renderPrices();
   });
 
-  // Initialize from URL params (?plan=team&period=yearly)
+  // Initialize from URL params (?plan=pro&period=yearly)
   const params = new URLSearchParams(window.location.search);
-  const urlPlan = (params.get('plan') || 'team').toLowerCase();
+  const urlPlan = (params.get('plan') || 'pro').toLowerCase();
   const urlPeriod = (params.get('period') || 'yearly').toLowerCase();
   if (PLANS[urlPlan]) currentPlan = urlPlan;
   if (urlPeriod === 'monthly' || urlPeriod === 'yearly') currentTerm = urlPeriod;

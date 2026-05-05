@@ -394,10 +394,10 @@ a.nav__cta:hover{
 .password-toggle:hover{
   color:var(--black);
 }
-/* ─── Plan selector: 2x2 grid of clickable bubble cards ─── */
+/* ─── Plan selector: vertical stack of clickable bubble cards ─── */
 .plan-selector{
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  display:flex;
+  flex-direction:column;
   gap:0.625rem;
   margin-bottom:0.875rem;
 }

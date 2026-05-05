@@ -51,21 +51,12 @@
           <div class="plan-option__price" data-price></div>
           <div class="plan-option__sub" data-sub></div>
         </button>
-        <button type="button" class="plan-option" data-plan="pro" role="radio" aria-checked="false">
+        <button type="button" class="plan-option plan-option--active" data-plan="pro" role="radio" aria-checked="true">
           <div class="plan-option__head">
             <span class="plan-option__name">Pro</span>
             <span class="plan-option__check" aria-hidden="true"></span>
           </div>
           <div class="plan-option__tagline">Independent artists and power users</div>
-          <div class="plan-option__price" data-price></div>
-          <div class="plan-option__sub" data-sub></div>
-        </button>
-        <button type="button" class="plan-option plan-option--active" data-plan="team" role="radio" aria-checked="true">
-          <div class="plan-option__head">
-            <span class="plan-option__name">Team</span>
-            <span class="plan-option__check" aria-hidden="true"></span>
-          </div>
-          <div class="plan-option__tagline">Labels and management teams</div>
           <div class="plan-option__price" data-price></div>
           <div class="plan-option__sub" data-sub></div>
         </button>
@@ -104,7 +95,7 @@
       <input type="text" id="promoCode" name="promo_code" placeholder="Enter your code">
     </div>
 
-    <input type="hidden" name="plan" id="hiddenPlan" value="team">
+    <input type="hidden" name="plan" id="hiddenPlan" value="pro">
     <input type="hidden" name="period" id="hiddenPeriod" value="yearly">
 
     <div class="checkbox-group">
