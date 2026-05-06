@@ -7,14 +7,18 @@
 
 .team-form-error{
   display:inline-flex;
-  align-items:center;
-  gap:0.5rem;
+  /* flex-start so multi-line text wraps under the badge instead of
+     wrapping around it — single-line still looks centred because
+     line-height equals badge height. */
+  align-items:flex-start;
+  gap:0.4375rem;
   margin-top:0.5rem;
-  padding:0.375rem 0.875rem 0.375rem 0.375rem;
+  padding:0.4375rem 0.75rem 0.4375rem 0.4375rem;
   background:rgba(25,25,25,0.04);
   border:1px solid rgba(25,25,25,0.08);
-  border-radius:100px;
-  font-size:0.8125rem;
+  border-radius:0.5rem;
+  font-size:0.75rem;
+  line-height:1rem;
   font-weight:500;
   color:#191919;
   letter-spacing:-0.005em;
@@ -22,7 +26,7 @@
   max-width:100%;
 }
 .team-form-error__icon{
-  width:1.25rem;height:1.25rem;
+  width:1rem;height:1rem;
   border-radius:50%;
   background:#D9FA87;
   color:#191919;
@@ -30,7 +34,7 @@
   align-items:center;
   justify-content:center;
   font-weight:800;
-  font-size:0.8125rem;
+  font-size:0.6875rem;
   line-height:1;
   flex-shrink:0;
   font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;

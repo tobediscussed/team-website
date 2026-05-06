@@ -31,16 +31,17 @@
   function messageFor(field){
     var data = field.getAttribute('data-error');
     if (data) return data;
-    var lbl = labelText(field);
-    if (!field.value || (typeof field.value === 'string' && !field.value.trim())) {
-      return lbl ? 'Please add your ' + lbl.toLowerCase() : 'This field is required';
+    if (field.type === 'checkbox' || field.type === 'radio') {
+      if (!field.checked) return 'Tick the box to continue';
     }
-    if (field.type === 'email') return 'Please enter a valid email address';
-    if (field.type === 'url')   return 'Please enter a valid URL';
-    if (field.type === 'tel')   return 'Please enter a valid phone number';
-    if (field.validity && field.validity.tooShort)  return 'Please make this longer';
-    if (field.validity && field.validity.tooLong)   return 'Please shorten this';
-    if (field.validity && field.validity.patternMismatch) return 'Please match the requested format';
+    var empty = !field.value || (typeof field.value === 'string' && !field.value.trim());
+    if (empty) return 'Oops, you missed this one';
+    if (field.type === 'email') return "That email doesn't look right";
+    if (field.type === 'url')   return "That URL doesn't look right";
+    if (field.type === 'tel')   return "That number doesn't look right";
+    if (field.validity && field.validity.tooShort) return 'A bit too short';
+    if (field.validity && field.validity.tooLong)  return 'A bit too long';
+    if (field.validity && field.validity.patternMismatch) return 'Hmm, please check the format';
     return field.validationMessage || 'Please check this field';
   }
 
