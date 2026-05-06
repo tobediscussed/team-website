@@ -3,12 +3,12 @@
 Outstanding items for the Webflow staging site (`go.teamrollouts.com`) before going live on `teamrollouts.com`.
 
 ## Pending — CRM lead capture
-- [ ] **Finalise Lifecycle Stage / Lead Status value set.** Placeholders are set in `LEAD_DEFAULTS` at the top of `server/api/routes/websiteLeads.ts`:
+- Lifecycle Stage / Lead Status defaults — aligned with CRM canonical enums (`client/src/lib/statusConstants.ts`):
   - newsletter  → `subscriber` / `new`
   - contact     → `lead` / `new`
-  - demo        → `marketing_qualified_lead` / `demo_requested`
-  - onboarding  → `product_qualified_lead` / `signed_up`
-  Update both `LEAD_DEFAULTS` and `STAGE_RANK` in one place when canonical values are decided.
+  - demo        → `sql` / `new`
+  - onboarding  → `trial_customer` / `new`
+  Lifecycle is upgrade-only (won't downgrade a trial_customer to subscriber on later submissions). All lead statuses start `new` so SDRs can progress through `in_progress` → `connected` etc. manually. Edit `LEAD_DEFAULTS` + `STAGE_RANK` in `server/api/routes/websiteLeads.ts` to change.
 - [ ] Decide whether website leads should land in a review queue (pending SDR enrichment) or straight into a pipeline stage. Pipeline stage currently not touched on submission.
 - [ ] Add Cloudflare Turnstile to demo + contact + onboarding forms once we see any spam volume. (Honeypot only for now.)
 - [ ] Replace the temporary `simon@teamrollouts.com` notification address with a shared inbox or distribution list once we know who needs to see new leads. Configurable via `WEBSITE_LEADS_NOTIFY_EMAIL` env var on the CRM Render service.
