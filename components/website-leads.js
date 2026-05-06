@@ -58,26 +58,44 @@
   function buildPayload(form, sourceForm){
     var fd = new FormData(form);
     var payload = { source_form: sourceForm };
-    var aliases = {
+    // Single-value aliases: pick first non-empty match.
+    var singles = {
       first_name:    ['first_name', 'firstName'],
       last_name:     ['last_name',  'lastName'],
       email:         ['email'],
       organization:  ['organization', 'company', 'label', 'org'],
       role:          ['role', 'job_title', 'title'],
       artists_managed: ['artists_managed', 'artists', 'roster_size'],
-      interest:      ['interest', 'reason'],
       message:       ['message', 'note', 'notes', 'comments'],
+      plan:          ['plan'],
+      period:        ['period', 'billing_period'],
       website:       ['website'],
     };
-    Object.keys(aliases).forEach(function(key){
+    Object.keys(singles).forEach(function(key){
       var picked;
-      aliases[key].some(function(name){
+      singles[key].some(function(name){
         var v = fd.get(name);
         if (v != null && String(v).trim() !== '') { picked = String(v).trim(); return true; }
         return false;
       });
       if (picked != null) payload[key] = picked;
     });
+    // Multi-value aliases (e.g. interest checkboxes share a name).
+    var interests = [];
+    ['interest', 'interests', 'reason'].forEach(function(name){
+      fd.getAll(name).forEach(function(v){
+        if (v != null) {
+          var s = String(v).trim();
+          if (s && interests.indexOf(s) === -1) interests.push(s);
+        }
+      });
+    });
+    if (interests.length) payload.interest = interests;
+    // Boolean consent fields. Treat any presence (checkbox checked) as true.
+    var consent = fd.get('agree_terms') ?? fd.get('consent') ?? fd.get('marketing_consent');
+    if (consent != null && consent !== '' && consent !== '0' && consent !== 'false') {
+      payload.agree_terms = true;
+    }
     var utms = readUtms();
     Object.keys(utms).forEach(function(k){ if (utms[k]) payload[k] = utms[k]; });
     payload.page_url = window.location.href;
