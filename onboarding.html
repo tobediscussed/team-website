@@ -766,7 +766,7 @@ a.nav__cta:hover{
 <main class="auth-page">
   <div class="auth-header">
     <h1>Start your free trial</h1>
-    <p>60 days of full access. No credit card required.</p>
+    <p>30 days of full access. No credit card required.</p>
   </div>
 
   <!-- TODO: Wire form POST to Team platform API + HubSpot -->
@@ -887,7 +887,7 @@ a.nav__cta:hover{
 <script>
 (function() {
   // Plan config — prices mirror pricing.html
-  // Every paid plan is $0 for the 60-day trial, then the regular rate.
+  // Every paid plan is $0 for the 30-day trial, then the regular rate.
   const PLANS = {
     free: {
       name: 'Free',
@@ -903,7 +903,7 @@ a.nav__cta:hover{
       price: { yearly: 19.99, monthly: 24.99 },
       hasPeriod: true,
       cta: 'Start my first release',
-      main: () => ({ price: '$0', unit: 'for 60 days' }),
+      main: () => ({ price: '$0', unit: 'for 30 days' }),
       sub: (term) => `Then $${PLANS.pro.price[term].toFixed(2)}/mo, billed ${term}`,
     },
     team: {
@@ -911,7 +911,7 @@ a.nav__cta:hover{
       price: { yearly: 51.99, monthly: 64.99 },
       hasPeriod: true,
       cta: 'Start my first release',
-      main: () => ({ price: '$0', unit: 'for 60 days' }),
+      main: () => ({ price: '$0', unit: 'for 30 days' }),
       sub: (term) => `Then $${PLANS.team.price[term].toFixed(2)}/mo per seat, billed ${term}`,
     },
     enterprise: {

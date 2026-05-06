@@ -1,7 +1,7 @@
 /* Team — onboarding scripts */
 (function() {
   // Plan config — prices mirror pricing.html
-  // Every paid plan is $0 for the 60-day trial, then the regular rate.
+  // Every paid plan is $0 for the 30-day trial, then the regular rate.
   const PLANS = {
     free: {
       name: 'Free',
@@ -17,7 +17,7 @@
       price: { yearly: 19.99, monthly: 24.99 },
       hasPeriod: true,
       cta: 'Start my first release',
-      main: () => ({ price: '$0', unit: 'for 60 days' }),
+      main: () => ({ price: '$0', unit: 'for 30 days' }),
       sub: (term) => `Then $${PLANS.pro.price[term].toFixed(2)}/mo, billed ${term}`,
     },
     enterprise: {

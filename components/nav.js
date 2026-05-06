@@ -447,7 +447,7 @@ body.nav-mobile-lock{overflow:hidden}
     ],
     promo: {
       kicker: 'Try it free',
-      headline: 'Start free for 60 days.',
+      headline: 'Start free for 30 days.',
       body: 'No credit card required. Full access to Team on your first three releases.',
       cta: 'Start free',
       href: links.signup,
@@ -550,7 +550,7 @@ body.nav-mobile-lock{overflow:hidden}
       ]},
     ],
     promo: {
-      kicker: 'Try it free', headline: 'Start free for 60 days.',
+      kicker: 'Try it free', headline: 'Start free for 30 days.',
       body: 'No credit card required. Full access to Team on your first three releases.',
       cta: 'Start free', href: links.signup,
     },
