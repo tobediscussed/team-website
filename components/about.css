@@ -640,11 +640,12 @@ a.nav__cta:hover{color:#111 !important;background:rgba(255,255,255,0.75);backdro
   border:1px solid rgba(0,0,0,0.06);
   border-radius:1rem;background:#fff;
   position:relative;overflow:hidden;
-  transition:box-shadow 0.3s var(--ease),border-color 0.3s;
-  opacity:0;transform:translateY(20px);
-  transition:opacity 0.5s var(--ease),transform 0.5s var(--ease),box-shadow 0.3s,border-color 0.3s;
+  /* Was: opacity:0 + .is-visible reveal driven by an
+     IntersectionObserver. The about page is built as native Webflow
+     elements with no per-page JS, so the observer never runs and the
+     cards stayed hidden. Keeping them visible by default. */
+  transition:box-shadow 0.3s,border-color 0.3s;
 }
-.value-card.is-visible{opacity:1;transform:translateY(0)}
 .value-card:nth-child(2).is-visible{transition-delay:0.08s}
 .value-card:nth-child(3).is-visible{transition-delay:0.16s}
 .value-card:hover{border-color:rgba(0,0,0,0.1);box-shadow:0 8px 40px rgba(0,0,0,0.06)}
