@@ -1,5 +1,4 @@
 /* Team — cookie-policy scripts */
-<script>
 (function(){
   const nav = document.getElementById('nav');
   if(!nav) return;
@@ -11,7 +10,6 @@
   check();
 })();
 
-<script>
 (function(){
   const tocLinks = document.querySelectorAll('.legal-toc a');
   const sections = Array.from(tocLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);

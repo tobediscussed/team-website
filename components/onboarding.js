@@ -1,5 +1,4 @@
 /* Team — onboarding scripts */
-<script>
 (function() {
   // Plan config — prices mirror pricing.html
   // Every paid plan is $0 for the 60-day trial, then the regular rate.

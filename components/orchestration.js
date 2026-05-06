@@ -1,5 +1,4 @@
 /* Team — orchestration scripts */
-<script>
 (function() {
   var nav = document.getElementById('nav');
   var hero = document.getElementById('heroSection');
@@ -24,7 +23,6 @@
   check();
 })();
 
-<script>
 (function() {
   var section = document.getElementById('problemSection');
   if (!section) return;
@@ -103,7 +101,6 @@
   update();
 })();
 
-<script>
 (function initFeatures() {
   var section = document.getElementById('featuresSection');
   if (!section) return;
@@ -184,7 +181,6 @@
   }
 })();
 
-<script>
 (function() {
   // Gradient visibility — fade in/out based on scroll position in problem section
   var problemSection = document.getElementById('problemSection');

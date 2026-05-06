@@ -1,5 +1,4 @@
 /* Team — security scripts */
-<script>
 (function() {
   const nav = document.getElementById('nav');
   const hero = document.getElementById('heroSection');
@@ -26,7 +25,6 @@
   check();
 })();
 
-<script>
 (function() {
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function(entries) {
@@ -41,7 +39,6 @@
   }
 })();
 
-<script>
 (function() {
   var panel = document.getElementById('isoPanel');
   if (!panel) return;
@@ -139,7 +136,6 @@
   requestAnimationFrame(animatePulses);
 })();
 
-<script>
 (function() {
   var section = document.getElementById('complianceSection');
   if (!section) return;
@@ -229,7 +225,6 @@
   update();
 })();
 
-<script>
 (function initFaq() {
   const list = document.getElementById('faqList');
   if (!list) return;

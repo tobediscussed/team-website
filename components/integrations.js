@@ -1,5 +1,4 @@
 /* Team — integrations scripts */
-<script>
 (function() {
   var nav = document.getElementById('nav');
   var hero = document.getElementById('heroSection');
@@ -21,7 +20,6 @@
   check();
 })();
 
-<script>
 (function() {
   var cards = document.querySelectorAll('.int-card');
   var filters = document.querySelectorAll('.int-filter');

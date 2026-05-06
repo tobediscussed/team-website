@@ -1,5 +1,4 @@
 /* Team — For-partners scripts */
-<script>
 (function() {
   const nav = document.getElementById('nav');
   const hero = document.getElementById('heroSection');
@@ -35,9 +34,7 @@
     document.querySelectorAll('.step').forEach(function(s) { observer.observe(s); });
   }
 })();
-</script>
 
-<script>
 (function() {
   var tabs = document.querySelectorAll('.partner-tab');
   var panels = document.querySelectorAll('.partner-panel');
@@ -258,4 +255,3 @@
     requestAnimationFrame(step);
   }
 })();
-</script>

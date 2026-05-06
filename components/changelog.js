@@ -1,5 +1,4 @@
 /* Team — changelog scripts */
-<script>
 (function() {
   var filters = document.querySelectorAll('.cl-filter');
   var dates = document.querySelectorAll('.cl-date');

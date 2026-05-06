@@ -1,5 +1,4 @@
 /* Team — insights scripts */
-<script>
 (function() {
   var filters = document.querySelectorAll('.insights-filter');
   var posts = document.querySelectorAll('.post-item');

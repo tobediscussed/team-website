@@ -1,5 +1,4 @@
 /* Team — Enterprise scripts */
-<script>
 (function() {
   var nav = document.getElementById('nav');
   var hero = document.getElementById('heroSection');
@@ -24,7 +23,6 @@
   check();
 })();
 
-<script>
 (function() {
   // Shared panel animation function
   window._animatePanel = function(panel) {

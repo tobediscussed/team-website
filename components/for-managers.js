@@ -1,5 +1,4 @@
 /* Team — For-managers scripts */
-<script>
 (function() {
   const nav = document.getElementById('nav');
   const hero = document.getElementById('heroSection');
@@ -35,9 +34,7 @@
     document.querySelectorAll('.step').forEach(function(s) { observer.observe(s); });
   }
 })();
-</script>
 
-<script>
 (function initFeatures() {
   var section = document.getElementById('featuresSection');
   if (!section) return;
@@ -109,4 +106,3 @@
     startAuto();
   }
 })();
-</script>

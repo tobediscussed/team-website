@@ -1,5 +1,4 @@
 /* Team — sign-in scripts */
-<script>
 (function() {
   // Password show/hide toggle
   document.querySelectorAll('.password-toggle').forEach(function(btn) {
