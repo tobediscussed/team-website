@@ -24,7 +24,11 @@
   letter-spacing:-0.005em;
   animation:team-form-error-in 0.28s cubic-bezier(0.16,1,0.3,1);
   max-width:100%;
+  /* When the parent is a horizontal flex (e.g. .checkbox-group),
+     drop the pill onto its own line under the field. */
+  flex:1 1 100%;
 }
+*:has(> .team-form-error){flex-wrap:wrap}
 .team-form-error__icon{
   width:1rem;height:1rem;
   border-radius:50%;
