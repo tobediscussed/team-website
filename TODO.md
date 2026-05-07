@@ -23,6 +23,7 @@ Outstanding items for the Webflow staging site (`go.teamrollouts.com`) before go
 - [ ] **404 + 500 pages** (Webflow-built)
 
 ## Pending — Content / pages
+- [ ] Replace stock-looking testimonial carousel photos on homepage. Either real Team-affiliated faces (best) or less-used Unsplash/Pexels portraits. Affects desktop + mobile.
 - [ ] Insights blog articles — kept on GH Pages for now (option A); migrate to per-page Webflow embeds later if we want them under `go.teamrollouts.com/insights/<slug>`
 - [ ] Replace `data-hubspot-form` attributes on contact / demo / onboarding forms once CRM-only is verified working
 
