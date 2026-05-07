@@ -350,7 +350,7 @@ gsap.ticker.lagSmoothing(0);
   if (!wrapper || !center || !left || !right || !heroImg || !landing) return;
 
   // Image shown inside the excerpt rectangle (separate from hero BG).
-  const imgSrc = 'https://siteamrollouts.github.io/team-website/assets/hero-bg-option-1.jpeg';
+  const imgSrc = 'https://tobediscussed.github.io/team-website/assets/hero-bg-option-1.jpeg';
 
   // ── Compute hero-aligned + cover-equivalent pixel values ──
   // Uses a FIXED reference aspect ratio so swapping hero images doesn't
@@ -390,10 +390,10 @@ gsap.ticker.lagSmoothing(0);
   // ── Flanking tiles: force hidden, set BG to cover ──
   gsap.set(left, { x: 0, rotation: 0, opacity: 0 });
   gsap.set(right, { x: 0, rotation: 0, opacity: 0 });
-  left.style.backgroundImage = 'url(https://siteamrollouts.github.io/team-website/assets/hero-bg-option-4.jpeg)';
+  left.style.backgroundImage = 'url(https://tobediscussed.github.io/team-website/assets/hero-bg-option-4.jpeg)';
   left.style.backgroundSize = 'cover';
   left.style.backgroundPosition = 'center';
-  right.style.backgroundImage = 'url(https://siteamrollouts.github.io/team-website/assets/hero-bg-option-3.jpeg)';
+  right.style.backgroundImage = 'url(https://tobediscussed.github.io/team-website/assets/hero-bg-option-3.jpeg)';
   right.style.backgroundSize = 'cover';
   right.style.backgroundPosition = 'center';
 
@@ -1414,7 +1414,7 @@ gsap.ticker.lagSmoothing(0);
   function showGame(){
     if(gameActive) return;
     gameActive = true;
-    frame.src = 'https://siteamrollouts.github.io/team-website/game/index.html';
+    frame.src = 'https://tobediscussed.github.io/team-website/game/index.html';
     overlay.style.display = 'block';
     // Trigger fade in on next frame
     requestAnimationFrame(function(){ requestAnimationFrame(function(){

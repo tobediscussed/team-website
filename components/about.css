@@ -133,7 +133,7 @@ a.nav__cta:hover{color:#111 !important;background:rgba(255,255,255,0.75);backdro
   position:absolute;inset:0;z-index:0;
   /* Webflow renders the inner image as <imgraw> (custom tag, no native
      rendering). Setting the bg via CSS so the hero looks right regardless. */
-  background:url("https://siteamrollouts.github.io/team-website/assets/hero-bg-new.png") center/cover no-repeat;
+  background:url("https://tobediscussed.github.io/team-website/assets/hero-bg-new.png") center/cover no-repeat;
 }
 .icp-hero__bg img,.icp-hero__bg imgraw{
   width:100%;height:100%;object-fit:cover;
