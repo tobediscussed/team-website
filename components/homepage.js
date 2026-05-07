@@ -1443,3 +1443,25 @@ gsap.ticker.lagSmoothing(0);
 
   resetTimer();
 })();
+
+
+// ─── Mobile-only chat-hero (CX-46) ───────────────────────────────────────
+// Replaces the desktop platform/dashboard pin animation on portrait
+// screens. CSS hides the panel's children by default and reveals them
+// staggered when .is-visible lands; we toggle that class via
+// IntersectionObserver so the bubbles cascade in as the user scrolls
+// the section into view. No-op on desktop because the element itself
+// is display:none above 768px.
+(function initMobileChatHero(){
+  var panel = document.getElementById('mobileChatHero');
+  if (!panel || typeof IntersectionObserver === 'undefined') return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        panel.classList.add('is-visible');
+        io.disconnect();
+      }
+    });
+  }, { threshold: 0.25 });
+  io.observe(panel);
+})();

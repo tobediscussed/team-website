@@ -392,6 +392,38 @@
 <!-- ═══════════════════════════════════════════
      GUIDELINES + AI ASSISTANT
      ═══════════════════════════════════════════ -->
+<!-- Mobile-only chat block (CX-46). The desktop platform/dashboard pin
+     in #guidelinesSection is portrait-hostile — the SDR sees only the
+     sidebar at most scroll positions. On mobile we hide that section
+     entirely and show this dedicated TeamMate chat preview which fits
+     in one viewport and animates on scroll via IntersectionObserver. -->
+<section class="mobile-chat-hero" aria-label="TeamMate chat preview">
+  <div class="mobile-chat-hero__inner">
+    <div class="mobile-chat-hero__intro">
+      <h2>Chat with TeamMate</h2>
+      <p>Plan, execute, and learn — your release co-pilot.</p>
+    </div>
+    <div class="mobile-chat-hero__panel ph-chat" id="mobileChatHero">
+      <div class="ph-chat__user-row">
+        <div class="ph-chat__avatar ph-chat__avatar--user">SL</div>
+        <div class="ph-chat__bubble ph-chat__bubble--user">Plan a comprehensive pre-release strategy focused on fan engagement.</div>
+      </div>
+      <div class="ph-chat__ai-row">
+        <div class="ph-chat__avatar ph-chat__avatar--ai">T</div>
+        <div class="ph-chat__bubble ph-chat__bubble--ai">Got it. I'll draft a 6-week rollout: pre-save, snippet drops at -21d / -14d / -7d, two creator collabs, and release-day fan livestream. Want me to add it to the timeline?</div>
+      </div>
+      <div class="ph-chat__user-row">
+        <div class="ph-chat__avatar ph-chat__avatar--user">SL</div>
+        <div class="ph-chat__bubble ph-chat__bubble--user">Yes — and remind me 48h before each drop.</div>
+      </div>
+      <div class="ph-chat__ai-row">
+        <div class="ph-chat__avatar ph-chat__avatar--ai">T</div>
+        <div class="ph-chat__bubble ph-chat__bubble--ai">Done. Reminders set, timeline updated, collaborators notified.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="guidelines-section" id="guidelinesSection">
   <div id="assistantTrigger" class="guidelines-trigger" style="width:100%">
     <div class="guidelines-w" id="guidelinesWrap">

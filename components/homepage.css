@@ -816,6 +816,11 @@ body.nav-mobile-lock{overflow:hidden}
    max-width:768px media query). Hidden on desktop so the input
    remains the visible field. */
 .search-input-mirror{ display:none; }
+
+/* Mobile-only chat-hero — replaces the platform/dashboard animation
+   on portrait devices (CX-46). Hidden on desktop where the full
+   guidelines-section animation runs. */
+.mobile-chat-hero{ display:none; }
 .search-submit{
   background:#D9FA87;color:#111;
   font-size:0.8125rem;font-weight:700;
@@ -1889,6 +1894,12 @@ details[open] .accordion-summary svg{transform:rotate(180deg)}
     min-height: 80vh; min-height: 80svh;
     padding: 4rem 1.5rem 3rem;
     position: relative !important;
+    /* FIX-#1 (CX-46): vertically centre the headline + buttons inside
+       the 80svh hero on mobile so the whole header block sits in the
+       middle of the viewport instead of hugging the top. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .cover-w::after { display: none; } /* the dark scroll overlay was tied to the fan animation */
 
@@ -1979,28 +1990,97 @@ details[open] .accordion-summary svg{transform:rotate(180deg)}
     padding-right: 1.25rem !important;
   }
 
-  /* FIX-#2: One platform / One team — previously trimmed too much
-     whitespace from above this section so the headline crashed into
-     the hero. Restore generous top padding; keep below-padding tight
-     because the next visual (the tile-landing animation slot) provides
-     its own space. */
-  #uploadSection { padding-top: 5rem !important; padding-bottom: 1.5rem !important; }
+  /* FIX-#2 (CX-46): One platform / One team — earlier pass set
+     padding-top:5rem but Simon still reads it as crashing into the
+     hero. Use both margin-top AND padding-top, with bigger numbers,
+     and target both the section and the inner section-intro so
+     whatever's collapsing the top space gets pushed apart. Below
+     padding stays tight (the tile-landing zone has its own height). */
+  #uploadSection {
+    margin-top: 4rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 1rem !important;
+  }
+  #uploadSection .section-intro { margin-bottom: 1rem !important; }
+  #uploadSection #tileLandingZone { height: 4rem !important; }
 
-  /* FIX-#3: Built-for-every-role tabs were horizontally scrollable
-     and one-way only on mobile. Stack-wrap them so all four pills are
-     always visible without scrolling. */
+  /* FIX-#3 (CX-46): tabs were left-aligned on mobile (not centred)
+     because flex-wrap on a row that fits all four pills doesn't wrap
+     and falls back to start-aligned on the row. Switch to a 2x2 grid
+     so they ALWAYS stack, every cell is the same width, and visually
+     centred under the heading. */
   .roles-tabs {
-    flex-wrap: wrap;
-    overflow-x: visible;
-    justify-content: center;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
     padding-bottom: 0;
+    overflow-x: visible;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 22rem;
   }
   .roles-tab {
-    flex: 0 1 auto;
-    white-space: normal;
+    width: 100%;
     text-align: center;
+    white-space: normal;
   }
+
+  /* FIX-#4 (CX-46): the platform/dashboard animation in
+     #guidelinesSection is portrait-hostile on mobile — the pin sequence
+     leaves the SDR staring at just the sidebar. Hide it entirely on
+     mobile and show a dedicated mobile-only chat block (#mobileChatHero,
+     injected just before guidelines-section) which fits in one viewport. */
+  #guidelinesSection { display: none !important; }
+  .mobile-chat-hero {
+    display: block;
+    padding: 4rem 1.25rem;
+    background: linear-gradient(180deg, #fafafa 0%, #f0f0ea 100%);
+  }
+  .mobile-chat-hero__inner { max-width: 26rem; margin: 0 auto; }
+  .mobile-chat-hero__intro { text-align: center; margin-bottom: 1.5rem; }
+  .mobile-chat-hero__intro h2 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 0.5rem; }
+  .mobile-chat-hero__intro p { font-size: 0.875rem; color: var(--text-secondary); margin: 0; }
+  .mobile-chat-hero__panel {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  }
+  /* Scroll-triggered stagger for the chat bubbles. JS toggles
+     .is-visible via IntersectionObserver (initMobileChatHero in
+     homepage.js) when the panel enters the viewport. */
+  .mobile-chat-hero__panel > * {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .mobile-chat-hero__panel.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+  .mobile-chat-hero__panel.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
+  .mobile-chat-hero__panel.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 1.6s; }
+  .mobile-chat-hero__panel.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 2.2s; }
+
+  /* FIX-#5 (CX-46): tile illustrations overflowed the cards because
+     .features-preview had padding:3rem (huge on a narrow card) and
+     ph-budget laid out donut+legend horizontally. Constrain every
+     placeholder to 100% width, drop the heavy padding, and stack
+     ph-budget vertically so legend rows have full width to breathe. */
+  .features-preview { padding: 1rem !important; aspect-ratio: 4/3; }
+  .features-preview__panel { padding: 0.75rem !important; }
+  .ph-timeline,
+  .ph-chat,
+  .ph-intel,
+  .ph-rollout,
+  .ph-budget { max-width: 100% !important; width: 100% !important; }
+  .ph-intel { grid-template-columns: 1fr !important; }
+  .ph-budget {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+    align-items: center;
+  }
+  .ph-budget__donut { width: 5rem !important; height: 5rem !important; }
+  .ph-budget__legend { width: 100%; font-size: 0.75rem; }
 }
 @media (max-width: 480px) {
   .roles-tab { padding: 0.5rem 1rem; font-size: 0.8125rem; }
