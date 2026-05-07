@@ -1864,3 +1864,83 @@ details[open] .accordion-summary svg{transform:rotate(180deg)}
   *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
   .marquee-list{animation:none!important}
 }
+
+/* ==============================================================
+   MOBILE — Homepage-specific patches (≤768px)
+   Addresses 2026-05-07 ticket: hide hero tile fan, stack search
+   bar, scale Teammate dashboard demo, hide in-illustration labels,
+   align FAQ answer padding.
+   Universal tab-strip overflow + image clamps live in nav.css.
+   ============================================================== */
+@media (max-width: 768px) {
+  /* 1. Hero — kill the fan-out tiles (Single/EP/Album) and tighten
+     the wrapper so the big white space they used to fill collapses. */
+  .hero-excerpts,
+  .hero-excerpt,
+  .hero-excerpt__flank,
+  .tile-label { display: none !important; }
+  .hero-section { min-height: auto !important; padding-bottom: 3rem; }
+  .cover-w {
+    height: auto !important;
+    min-height: 80vh; min-height: 80svh;
+    padding: 4rem 1.5rem 3rem;
+    position: relative !important;
+  }
+  .cover-w::after { display: none; } /* the dark scroll overlay was tied to the fan animation */
+
+  /* 2. Ask TeamMate search bar — input full-width, button below. */
+  .search-bar {
+    flex-wrap: wrap;
+    border-radius: 1.25rem;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .search-input {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    font-size: 1rem;
+  }
+  .search-submit {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+  }
+  /* The character was perched on the right end of the bar — looks
+     wrong now that the button has its own row. */
+  .teammate-character { display: none; }
+
+  /* 3. Engine + dashboard demo — collapse the giant 100vh wrapper
+     and let the inner mock breathe inside the viewport. */
+  .engine-w { height: auto !important; min-height: auto; padding: 2rem 0; }
+  .results-grid { grid-template-columns: 1fr 1fr !important; gap: 0.5rem !important; }
+  .search-selects { flex-wrap: wrap; justify-content: center; }
+  .guidelines-section { min-height: auto !important; padding: 0 1rem 2rem; }
+  .guidelines-w {
+    flex-direction: column;
+    min-height: auto !important;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: calc(100vw - 2rem);
+    overflow: hidden;
+  }
+  .guidelines-nav { width: 100%; }
+  .guidelines-content { padding: 1rem !important; overflow: hidden; }
+
+  /* 4. All-in-one platform — hide the in-illustration label chips
+     ("TeamMate AI", "Timeline", etc.) — clutter on small cards. */
+  .features-preview__panel-label { display: none !important; }
+
+  /* 5. FAQ answer — match the question's left/right padding so
+     copy doesn't sit flush to the screen edge. */
+  .faq-item__answer-content {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .roles-tab { padding: 0.5rem 1rem; font-size: 0.8125rem; }
+}
