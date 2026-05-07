@@ -812,6 +812,10 @@ body.nav-mobile-lock{overflow:hidden}
   font-family:inherit;background:transparent;
   min-width:0;
 }
+/* Mirror element used only on mobile (display toggled by the
+   max-width:768px media query). Hidden on desktop so the input
+   remains the visible field. */
+.search-input-mirror{ display:none; }
 .search-submit{
   background:#D9FA87;color:#111;
   font-size:0.8125rem;font-weight:700;
@@ -1888,27 +1892,61 @@ details[open] .accordion-summary svg{transform:rotate(180deg)}
   }
   .cover-w::after { display: none; } /* the dark scroll overlay was tied to the fan animation */
 
-  /* 2. Ask TeamMate search bar — input full-width, button below. */
+  /* 2. Ask TeamMate search bar — input full-width, button below.
+     Plus FIX-#1: vertically centre the pinned (bar + pondering) block
+     in the viewport on mobile so the lone pill doesn't sit awkwardly
+     high on a portrait screen.
+     Plus FIX-#4a: the native <input> can't wrap text. The mobile
+     typing animation fills the input past its visible width so the
+     copy ran off the side. We hide the input on mobile and show a
+     wrapping <div> mirror that homepage.js writes the same value into. */
+  .search-pin-wrap {
+    min-height: 50vh; min-height: 50svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem !important;
+  }
   .search-bar {
     flex-wrap: wrap;
     border-radius: 1.25rem;
     padding: 0.75rem;
-    width: 100%;
+    width: 100% !important;
     max-width: 100%;
   }
-  .search-input {
+  .search-input { display: none; }
+  .search-input-mirror {
+    display: block;
     flex-basis: 100%;
     width: 100%;
     padding: 0.625rem 0.75rem;
     font-size: 1rem;
+    line-height: 1.4;
+    color: var(--black);
+    white-space: normal;
+    word-break: break-word;
+    min-height: 1.4em;
   }
+  .search-input-mirror:empty::before {
+    content: attr(data-placeholder);
+    color: var(--text-secondary);
+    opacity: 0.6;
+  }
+  /* FIX-#4b: skip the resize-to-circle morph on mobile entirely. The
+     button stays full-width; only the label fades to reveal the
+     spinner in place. Avoids the elongated/squashed shape on the way
+     down to a 36px circle from a 100%-width box and on reverse. */
   .search-submit {
     flex-basis: 100%;
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
     margin-top: 0.5rem;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1rem !important;
+    border-radius: 2rem !important;
     justify-content: center;
+    transform: none !important;
   }
+  .search-submit__spinner { width: 1.25rem; height: 1.25rem; margin-top: -0.625rem; margin-left: -0.625rem; }
   /* The character was perched on the right end of the bar — looks
      wrong now that the button has its own row. */
   .teammate-character { display: none; }
@@ -1939,6 +1977,29 @@ details[open] .accordion-summary svg{transform:rotate(180deg)}
   .faq-item__answer-content {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
+  }
+
+  /* FIX-#2: One platform / One team — previously trimmed too much
+     whitespace from above this section so the headline crashed into
+     the hero. Restore generous top padding; keep below-padding tight
+     because the next visual (the tile-landing animation slot) provides
+     its own space. */
+  #uploadSection { padding-top: 5rem !important; padding-bottom: 1.5rem !important; }
+
+  /* FIX-#3: Built-for-every-role tabs were horizontally scrollable
+     and one-way only on mobile. Stack-wrap them so all four pills are
+     always visible without scrolling. */
+  .roles-tabs {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 0;
+  }
+  .roles-tab {
+    flex: 0 1 auto;
+    white-space: normal;
+    text-align: center;
   }
 }
 @media (max-width: 480px) {

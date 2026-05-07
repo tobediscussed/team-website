@@ -319,6 +319,10 @@
     <div class="search-pin-wrap" id="searchPinWrap" style="margin-top:3rem">
       <div class="search-bar" id="searchBar" style="position:relative">
         <input class="search-input" id="searchInput" placeholder="Ask TeamMate anything..." disabled>
+        <!-- Mobile-only wrapping mirror — the native <input> can't wrap text,
+             so the typing animation overflows. CSS hides this on >=769px and
+             hides the input on <=768px. JS writes to both. -->
+        <div class="search-input-mirror" id="searchInputMirror" data-placeholder="Ask TeamMate anything..." aria-hidden="true"></div>
         <button class="search-submit" id="searchSubmit">
           <span class="search-submit__label">Ask TeamMate</span>
           <span class="search-submit__spinner">

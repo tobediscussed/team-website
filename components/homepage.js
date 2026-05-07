@@ -537,6 +537,11 @@ gsap.ticker.lagSmoothing(0);
 
   const searchBar = document.getElementById('searchBar');
   const searchInput = document.getElementById('searchInput');
+  // Mirror element used on mobile to render the typed text with wrapping
+  // (native <input> can't wrap). CSS shows mirror + hides input on
+  // <=768px and the inverse on desktop. We write to both unconditionally
+  // so resize between breakpoints stays in sync.
+  const searchInputMirror = document.getElementById('searchInputMirror');
   const searchDialog = document.getElementById('searchDialog');
   const submitBtn = searchBar.querySelector('.search-submit');
   const pondering = document.getElementById('pondering');
@@ -673,27 +678,45 @@ gsap.ticker.lagSmoothing(0);
       gsap.set(submitSpinner, { clearProps: 'opacity,visibility' });
     },
   });
-  clickTl
-    // Quick press (fromTo so reverse always returns to scale 1)
-    .fromTo(submitBtn,
-      { scale: 1 },
-      { scale: 0.9, duration: 0.08, ease: 'power2.in' })
-    // Label fades out
-    .fromTo(submitLabel,
-      { autoAlpha: 1, scale: 1 },
-      { autoAlpha: 0, scale: 0.85, duration: 0.18, ease: 'power2.in' },
-    '<')
-    // Morph to circle (fromTo with explicit pixel start values)
-    .fromTo(submitBtn,
-      { scale: 0.9, width: origBtnW, height: origBtnH, paddingLeft: origBtnPadX, paddingRight: origBtnPadX, borderRadius: '2rem' },
-      { scale: 1, width: 36, height: 36, paddingLeft: 0, paddingRight: 0, borderRadius: '50%',
-        background: '#111', color: '#fff',
-        duration: 0.35, ease: 'back.out(1.8)' })
-    // Reveal spinner
-    .fromTo(submitSpinner,
-      { autoAlpha: 0 },
-      { autoAlpha: 1, duration: 0.2, ease: 'power2.out' },
-    '-=0.15');
+  if (isMobile) {
+    // Mobile path — button is full-width via CSS. Animating it down to a
+    // 36px circle elongates/squashes through every intermediate width on
+    // the way there and on reverse, which looks broken. Keep the box
+    // shape fixed and just swap label → spinner in place.
+    clickTl
+      .fromTo(submitLabel,
+        { autoAlpha: 1, scale: 1 },
+        { autoAlpha: 0, scale: 0.85, duration: 0.18, ease: 'power2.in' })
+      .to(submitBtn,
+        { background: '#111', color: '#fff', duration: 0.18, ease: 'power2.in' },
+      '<')
+      .fromTo(submitSpinner,
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 0.2, ease: 'power2.out' },
+      '-=0.05');
+  } else {
+    clickTl
+      // Quick press (fromTo so reverse always returns to scale 1)
+      .fromTo(submitBtn,
+        { scale: 1 },
+        { scale: 0.9, duration: 0.08, ease: 'power2.in' })
+      // Label fades out
+      .fromTo(submitLabel,
+        { autoAlpha: 1, scale: 1 },
+        { autoAlpha: 0, scale: 0.85, duration: 0.18, ease: 'power2.in' },
+      '<')
+      // Morph to circle (fromTo with explicit pixel start values)
+      .fromTo(submitBtn,
+        { scale: 0.9, width: origBtnW, height: origBtnH, paddingLeft: origBtnPadX, paddingRight: origBtnPadX, borderRadius: '2rem' },
+        { scale: 1, width: 36, height: 36, paddingLeft: 0, paddingRight: 0, borderRadius: '50%',
+          background: '#111', color: '#fff',
+          duration: 0.35, ease: 'back.out(1.8)' })
+      // Reveal spinner
+      .fromTo(submitSpinner,
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 0.2, ease: 'power2.out' },
+      '-=0.15');
+  }
 
   // Pondering reveal timeline (paused)
   const ponderTl = gsap.timeline({ paused: true });
@@ -731,11 +754,16 @@ gsap.ticker.lagSmoothing(0);
         // Phase 1 (0–0.4): Typewriter + bar grows
         const typeProgress = Math.min(p / 0.4, 1);
         const chars = Math.floor(typeProgress * typeText.length);
-        searchInput.value = typeText.substring(0, chars);
+        const typed = typeText.substring(0, chars);
+        searchInput.value = typed;
+        if (searchInputMirror) searchInputMirror.textContent = typed;
 
-        // Grow bar from 28rem → 44rem
-        const barWidth = 28 + (typeProgress * 16);
-        gsap.set(searchBar, { width: Math.min(barWidth, 44) + 'rem' });
+        // Grow bar from 28rem → 44rem (desktop only — mobile bar is full-
+        // width via CSS and the GSAP width set fights with that).
+        if (!isMobile) {
+          const barWidth = 28 + (typeProgress * 16);
+          gsap.set(searchBar, { width: Math.min(barWidth, 44) + 'rem' });
+        }
 
         // Phase 2 (0.45+): Button click
         if (p >= 0.45 && !clickPlayed) {
@@ -770,7 +798,8 @@ gsap.ticker.lagSmoothing(0);
       },
       onLeaveBack: () => {
         searchInput.value = '';
-        gsap.set(searchBar, { width: '28rem' });
+        if (searchInputMirror) searchInputMirror.textContent = '';
+        if (!isMobile) gsap.set(searchBar, { width: '28rem' });
         clickPlayed = false;
         ponderingShown = false;
         fadedOut = false;
