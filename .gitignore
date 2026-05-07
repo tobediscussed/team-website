@@ -7,3 +7,9 @@ node_modules/
 # Internal exploration folders — not referenced by any production page
 example-moving-screen/
 rotato-test/
+
+# Local working-dir scratch (Slack screenshots, Premiere Pro source files etc.)
+messaging-example-kedar/
+assets/video/Homepage Header Character Video/
+assets/video/*.afdesign
+assets/video/*.prproj
