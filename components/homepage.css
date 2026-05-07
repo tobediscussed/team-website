@@ -1997,12 +1997,18 @@ details[open] .accordion-summary svg{transform:rotate(180deg)}
      whatever's collapsing the top space gets pushed apart. Below
      padding stays tight (the tile-landing zone has its own height). */
   #uploadSection {
-    margin-top: 4rem !important;
+    margin-top: 8rem !important;
     padding-top: 4rem !important;
-    padding-bottom: 1rem !important;
+    padding-bottom: 0 !important;
   }
-  #uploadSection .section-intro { margin-bottom: 1rem !important; }
-  #uploadSection #tileLandingZone { height: 4rem !important; }
+  #uploadSection .section-intro { margin-bottom: 0 !important; }
+  /* Mobile-only: break "One team." onto its own line. Desktop keeps
+     the original inline layout. */
+  .one-team { display: block; }
+  /* Tile landing zone is purely an animation drop-target on desktop;
+     on mobile we want as little dead space as possible between the
+     "See how it works" CTA and the next section. */
+  #uploadSection #tileLandingZone { display: none !important; }
 
   /* FIX-#3 (CX-46): tabs were left-aligned on mobile (not centred)
      because flex-wrap on a row that fits all four pills doesn't wrap
@@ -2033,13 +2039,12 @@ details[open] .accordion-summary svg{transform:rotate(180deg)}
   #guidelinesSection { display: none !important; }
   .mobile-chat-hero {
     display: block;
-    padding: 4rem 1.25rem;
-    background: linear-gradient(180deg, #fafafa 0%, #f0f0ea 100%);
+    padding: 2rem 1.25rem 4rem;
+    /* Transparent so the previous section's background bleeds through —
+       no hard line where engine-section ends and the chat preview begins. */
+    background: transparent;
   }
   .mobile-chat-hero__inner { max-width: 26rem; margin: 0 auto; }
-  .mobile-chat-hero__intro { text-align: center; margin-bottom: 1.5rem; }
-  .mobile-chat-hero__intro h2 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 0.5rem; }
-  .mobile-chat-hero__intro p { font-size: 0.875rem; color: var(--text-secondary); margin: 0; }
   .mobile-chat-hero__panel {
     background: #fff;
     border: 1px solid rgba(0,0,0,0.06);

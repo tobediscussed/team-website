@@ -1445,23 +1445,36 @@ gsap.ticker.lagSmoothing(0);
 })();
 
 
-// ─── Mobile-only chat-hero (CX-46) ───────────────────────────────────────
-// Replaces the desktop platform/dashboard pin animation on portrait
-// screens. CSS hides the panel's children by default and reveals them
-// staggered when .is-visible lands; we toggle that class via
-// IntersectionObserver so the bubbles cascade in as the user scrolls
-// the section into view. No-op on desktop because the element itself
-// is display:none above 768px.
+// ─── Mobile-only chat-hero (CX-46 / CX-49) ───────────────────────────────
+// Replaces the desktop platform/dashboard pin on portrait screens.
+// Uses ScrollTrigger (already loaded + Lenis-aware) to add .is-visible
+// when the panel scrolls into the lower 80% of the viewport, which
+// triggers the staggered CSS reveal of the bubbles. Falls back to a
+// 1.5s timeout if neither GSAP nor IO fire (e.g. Lenis disabled, or
+// the panel was already on-screen when the script ran).
 (function initMobileChatHero(){
   var panel = document.getElementById('mobileChatHero');
-  if (!panel || typeof IntersectionObserver === 'undefined') return;
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) {
-        panel.classList.add('is-visible');
-        io.disconnect();
-      }
+  if (!panel) return;
+
+  function reveal() { panel.classList.add('is-visible'); }
+
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: 'top 85%',
+      once: true,
+      onEnter: reveal,
     });
-  }, { threshold: 0.25 });
-  io.observe(panel);
+  } else if (typeof IntersectionObserver !== 'undefined') {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { reveal(); io.disconnect(); }
+      });
+    }, { threshold: 0.05 });
+    io.observe(panel);
+  }
+
+  // Safety net — if for any reason neither fires, force-reveal after
+  // 1.5s so the user never sees an empty white box.
+  setTimeout(function(){ if (!panel.classList.contains('is-visible')) reveal(); }, 1500);
 })();
