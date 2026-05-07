@@ -658,19 +658,43 @@ body.nav-mobile-lock{overflow:hidden}
     document.body.insertAdjacentHTML('afterbegin', navHTML);
   }
 
-  // If theme is "light", start with nav--solid — UNLESS the page has a
-  // #heroSection. Pages with a hero (e.g. the homepage) want the nav to
-  // be transparent over the hero on first paint and only flip to solid
-  // once the user has scrolled past it (handled by the ScrollTrigger
-  // further down). Without this guard a light-themed page with a dark
-  // hero image showed a stark white frosted bar at the top of the
-  // viewport on load — fixed itself only after a scroll round-trip
-  // because the ScrollTrigger's onLeaveBack would then remove the class.
+  // If theme is "light", start with nav--solid — UNLESS the page has
+  // (or will have) a #heroSection. Pages with a hero (e.g. the homepage)
+  // want the nav to be transparent over the hero on first paint and only
+  // flip to solid once the user has scrolled past it (handled by the
+  // ScrollTrigger further down).
+  //
+  // Timing trap: nav.js runs from the Webflow Footer code BEFORE the
+  // page body (which contains #heroSection) is fetched + injected by the
+  // separate body-embed loader. A naive `document.getElementById(...)`
+  // check at this point returns null on every page, so the guard would
+  // never trigger and the homepage's dark hero kept showing a stark
+  // white frosted bar on load. Earlier "fix" only worked once the body
+  // had already been injected — i.e. never on initial paint.
+  //
+  // Real fix: apply theme-based solid optimistically, then watch the DOM
+  // for #heroSection appearing (and strip the class when it does).
+  // Observer disconnects on first hit or after 3s safety timeout.
   const theme = container ? container.getAttribute('data-theme') : null;
   const nav = document.getElementById('nav');
-  const hasHero = !!document.getElementById('heroSection');
-  if (theme === 'light' && nav && !hasHero) {
+  if (theme === 'light' && nav) {
     nav.classList.add('nav--solid');
+
+    function syncHeroState() {
+      if (document.getElementById('heroSection')) {
+        nav.classList.remove('nav--solid');
+        return true;
+      }
+      return false;
+    }
+
+    if (!syncHeroState() && typeof MutationObserver !== 'undefined') {
+      const heroObs = new MutationObserver(() => {
+        if (syncHeroState()) heroObs.disconnect();
+      });
+      heroObs.observe(document.body, { childList: true, subtree: true });
+      setTimeout(() => heroObs.disconnect(), 3000);
+    }
   }
 
   // ─── Desktop dropdown hover open/close + background blur ───
